@@ -1,7 +1,7 @@
 import struct
 def num_ieee754_64bits(num):
-    # Convierte el número a 64 bits de coma flotante (IEEE 754)
     num1 = struct.pack('!d', num) #Contiene la secuencia de bytes
+    # Convierte el número a 64 bits (double) de coma flotante (IEEE 754)
 
     # Convierte los bytes a una representación binaria
     numBinario = ''.join(format(byte, '08b') for byte in num1) # Recorre los bytes y los convierte a 8 bits
