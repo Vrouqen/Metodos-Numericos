@@ -2,4 +2,46 @@ import tkinter as tk
 from tkinter import messagebox
 import Unidad1
 
+def opcion1():
+    def calcular_error_absoluto():
+        varReal = float(valor_real_entry.get())
+        varAprox = float(valor_aprox_entry.get())
+        errorAbs = Unidad1.calcularErrorAbsoluto(varReal, varAprox)
+        messagebox.showinfo("Resultado", f"El error absoluto es: {errorAbs}")
+
+    def calcular_error_relativo():
+        varReal = float(valor_real_entry.get())
+        varAprox = float(valor_aprox_entry.get())
+        errorRel = Unidad1.calcularErrorRelativo(varReal, varAprox)
+        messagebox.showinfo("Resultado", f"El error relativo es: {errorRel}")
+
+    def regresar():
+        error_absoluto_frame.pack_forget()
+        error_relativo_frame.pack_forget()
+        menu_frame.pack()
+
+    menu_frame.pack_forget()
+    error_absoluto_frame = tk.Frame(root)
+    error_absoluto_frame.pack()
+
+    valor_real_label = tk.Label(error_absoluto_frame, text="Ingrese el valor real:")
+    valor_real_label.pack()
+    valor_real_entry = tk.Entry(error_absoluto_frame)
+    valor_real_entry.pack()
+
+    valor_aprox_label = tk.Label(error_absoluto_frame, text="Ingrese el valor aproximado:")
+    valor_aprox_label.pack()
+    valor_aprox_entry = tk.Entry(error_absoluto_frame)
+    valor_aprox_entry.pack()
+
+    calcular_error_absoluto_button = tk.Button(error_absoluto_frame, text="Calcular error absoluto",
+                                              command=calcular_error_absoluto)
+    calcular_error_absoluto_button.pack()
+
+    calcular_error_relativo_button = tk.Button(error_absoluto_frame, text="Calcular error relativo",
+                                              command=calcular_error_relativo)
+    calcular_error_relativo_button.pack()
+
+    regresar_button = tk.Button(error_absoluto_frame, text="Regresar", command=regresar)
+    regresar_button.pack()
 
