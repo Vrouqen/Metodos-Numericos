@@ -164,3 +164,55 @@ def opcion3():
 
     regresar_button = tk.Button(punto_flotante_frame, text="Regresar", command=regresar)
     regresar_button.pack()
+
+def opcion4():
+    def calcular_ecuacion():
+        num = float(valor_x_entry.get())
+        respuesta = Unidad1.solucionDeEcuacion(num)
+        messagebox.showinfo("Resultado", f"El resultado de la ecuación es: {respuesta}")
+
+    def mostrar_grafica():
+        max_value = valor_max_entry.get()
+        try:
+            max_value = float(max_value)
+            if max_value > 1:
+                Unidad1.graficaDeEcuacion(max_value)
+            else:
+                messagebox.showerror("Error", "No se admiten valores menores que uno")
+        except ValueError:
+            messagebox.showerror("Error", "El valor máximo debe ser numérico.")
+
+    def regresar():
+        calculo_ecuacion_frame.pack_forget()
+        grafica_frame.pack_forget()
+        menu_frame.pack()
+
+    menu_frame.pack_forget()
+    propagacion_errores_frame = tk.Frame(root)
+    propagacion_errores_frame.pack()
+
+    calculo_ecuacion_frame = tk.Frame(propagacion_errores_frame)
+    grafica_frame = tk.Frame(propagacion_errores_frame)
+
+    calculo_ecuacion_frame.pack()
+    grafica_frame.pack()
+
+    # Cálculo de la ecuación
+    valor_x_label = tk.Label(calculo_ecuacion_frame, text="Ingrese el valor de x:")
+    valor_x_label.pack()
+    valor_x_entry = tk.Entry(calculo_ecuacion_frame)
+    valor_x_entry.pack()
+    calculo_ecuacion_button = tk.Button(calculo_ecuacion_frame, text="Calcular ecuación",
+                                        command=calcular_ecuacion)
+    calculo_ecuacion_button.pack()
+
+    # Mostrar gráfica
+    valor_max_label = tk.Label(grafica_frame, text="Ingrese hasta qué valor de x será la gráfica:")
+    valor_max_label.pack()
+    valor_max_entry = tk.Entry(grafica_frame)
+    valor_max_entry.pack()
+    mostrar_grafica_button = tk.Button(grafica_frame, text="Mostrar gráfica", command=mostrar_grafica)
+    mostrar_grafica_button.pack()
+
+    regresar_button = tk.Button(propagacion_errores_frame, text="Regresar", command=regresar)
+    regresar_button.pack()
