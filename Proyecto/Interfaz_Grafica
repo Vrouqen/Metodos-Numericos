@@ -216,3 +216,61 @@ def opcion4():
 
     regresar_button = tk.Button(propagacion_errores_frame, text="Regresar", command=regresar)
     regresar_button.pack()
+
+def mostrar_menu():
+    def seleccionar_opcion():
+        opcion = opcion_var.get()
+        if opcion == "1":
+            opcion1()
+        elif opcion == "2":
+            opcion2()
+        elif opcion == "3":
+            opcion3()
+        elif opcion == "4":
+            opcion4()
+        elif opcion == "5":
+            pass
+        elif opcion == "6":
+            pass
+        elif opcion == "0":
+            root.destroy()
+        else:
+            messagebox.showerror("Error", "Opción inválida. Por favor, selecciona una opción válida.")
+
+    menu_frame = tk.Frame(root)
+    menu_frame.pack()
+
+    opcion_var = tk.StringVar()
+
+    titulo_label = tk.Label(menu_frame, text="======= MENÚ =======")
+    titulo_label.pack()
+
+    opcion1_radio = tk.Radiobutton(menu_frame, text="1. Cálculo de errores", variable=opcion_var, value="1")
+    opcion1_radio.pack()
+
+    opcion2_radio = tk.Radiobutton(menu_frame, text="2. Sistemas de numeración", variable=opcion_var, value="2")
+    opcion2_radio.pack()
+
+    opcion3_radio = tk.Radiobutton(menu_frame, text="3. Punto flotante", variable=opcion_var, value="3")
+    opcion3_radio.pack()
+
+    opcion4_radio = tk.Radiobutton(menu_frame, text="4. Propagación de errores", variable=opcion_var, value="4")
+    opcion4_radio.pack()
+
+    opcion5_radio = tk.Radiobutton(menu_frame, text="5. Ecuaciones lineales", variable=opcion_var, value="5")
+    opcion5_radio.pack()
+
+    opcion6_radio = tk.Radiobutton(menu_frame, text="6. Ecuaciones no lineales", variable=opcion_var, value="6")
+    opcion6_radio.pack()
+
+    salir_radio = tk.Radiobutton(menu_frame, text="0. Salir", variable=opcion_var, value="0")
+    salir_radio.pack()
+
+    seleccionar_button = tk.Button(menu_frame, text="Seleccionar", command=seleccionar_opcion)
+    seleccionar_button.pack()
+
+
+root = tk.Tk()
+root.title("Cálculos numéricos")
+mostrar_menu()
+root.mainloop()
