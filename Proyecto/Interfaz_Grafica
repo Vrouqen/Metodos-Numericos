@@ -125,3 +125,42 @@ def opcion2():
 
     regresar_button = tk.Button(sistemas_numeracion_frame, text="Regresar", command=regresar)
     regresar_button.pack()
+
+def opcion3():
+    def convertir_a_ieee_32_bits():
+        numDecimal = float(decimal_entry.get())
+        numIEEE32 = Unidad1.convertirIEE754_32bits(numDecimal)
+        messagebox.showinfo("Resultado", f"El número transformado es: {numIEEE32}")
+
+    def convertir_a_ieee_64_bits():
+        numDecimal = float(decimal_entry.get())
+        numIEEE64 = Unidad1.convertirIEE754_64bits(numDecimal)
+        messagebox.showinfo("Resultado", f"El número transformado es: {numIEEE64}")
+
+    def regresar():
+        ieee_32_bits_frame.pack_forget()
+        ieee_64_bits_frame.pack_forget()
+        menu_frame.pack()
+
+    menu_frame.pack_forget()
+    punto_flotante_frame = tk.Frame(root)
+    punto_flotante_frame.pack()
+
+    ieee_32_bits_frame = tk.Frame(punto_flotante_frame)
+    ieee_64_bits_frame = tk.Frame(punto_flotante_frame)
+
+    ieee_32_bits_frame.pack()
+    ieee_64_bits_frame.pack()
+
+    # IEEE 32 bits
+    ieee_32_bits_button = tk.Button(ieee_32_bits_frame, text="Transformar a formato IEEE 32 bits",
+                                    command=convertir_a_ieee_32_bits)
+    ieee_32_bits_button.pack()
+
+    # IEEE 64 bits
+    ieee_64_bits_button = tk.Button(ieee_64_bits_frame, text="Transformar a formato IEEE 64 bits",
+                                    command=convertir_a_ieee_64_bits)
+    ieee_64_bits_button.pack()
+
+    regresar_button = tk.Button(punto_flotante_frame, text="Regresar", command=regresar)
+    regresar_button.pack()
