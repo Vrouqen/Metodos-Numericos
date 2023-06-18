@@ -45,3 +45,83 @@ def opcion1():
     regresar_button = tk.Button(error_absoluto_frame, text="Regresar", command=regresar)
     regresar_button.pack()
 
+def opcion2():
+    def convertir_binario_a_decimal():
+        binario = binario_entry.get()
+        decimal = Unidad1.convertirBinarioToDecimal(binario)
+        messagebox.showinfo("Resultado", f"El valor en decimal es: {decimal}")
+
+    def convertir_decimal_a_binario():
+        decimal = float(decimal_entry.get())
+        binario = Unidad1.convertirDecimalToBinario(decimal)
+        messagebox.showinfo("Resultado", f"El valor en binario es: {binario}")
+
+    def convertir_hexadecimal_a_decimal():
+        hexadecimal = hexadecimal_entry.get()
+        decimal = Unidad1.convertirHexadecimalToDecimal(hexadecimal)
+        messagebox.showinfo("Resultado", f"El valor en decimal es: {decimal}")
+
+    def convertir_octal_a_decimal():
+        octal = int(octal_entry.get())
+        decimal = Unidad1.convertirOctalToDecimal(octal)
+        messagebox.showinfo("Resultado", f"El valor en decimal es: {decimal}")
+
+    def regresar():
+        binario_decimal_frame.pack_forget()
+        decimal_binario_frame.pack_forget()
+        hexadecimal_decimal_frame.pack_forget()
+        octal_decimal_frame.pack_forget()
+        menu_frame.pack()
+
+    menu_frame.pack_forget()
+    sistemas_numeracion_frame = tk.Frame(root)
+    sistemas_numeracion_frame.pack()
+
+    binario_decimal_frame = tk.Frame(sistemas_numeracion_frame)
+    decimal_binario_frame = tk.Frame(sistemas_numeracion_frame)
+    hexadecimal_decimal_frame = tk.Frame(sistemas_numeracion_frame)
+    octal_decimal_frame = tk.Frame(sistemas_numeracion_frame)
+
+    binario_decimal_frame.pack()
+    decimal_binario_frame.pack()
+    hexadecimal_decimal_frame.pack()
+    octal_decimal_frame.pack()
+
+    # Binario a decimal
+    binario_label = tk.Label(binario_decimal_frame, text="Ingrese el número binario:")
+    binario_label.pack()
+    binario_entry = tk.Entry(binario_decimal_frame)
+    binario_entry.pack()
+    binario_decimal_button = tk.Button(binario_decimal_frame, text="Convertir a decimal",
+                                       command=convertir_binario_a_decimal)
+    binario_decimal_button.pack()
+
+    # Decimal a binario
+    decimal_label = tk.Label(decimal_binario_frame, text="Ingrese el número decimal:")
+    decimal_label.pack()
+    decimal_entry = tk.Entry(decimal_binario_frame)
+    decimal_entry.pack()
+    decimal_binario_button = tk.Button(decimal_binario_frame, text="Convertir a binario",
+                                       command=convertir_decimal_a_binario)
+    decimal_binario_button.pack()
+
+    # Hexadecimal a decimal
+    hexadecimal_label = tk.Label(hexadecimal_decimal_frame, text="Ingrese el número hexadecimal:")
+    hexadecimal_label.pack()
+    hexadecimal_entry = tk.Entry(hexadecimal_decimal_frame)
+    hexadecimal_entry.pack()
+    hexadecimal_decimal_button = tk.Button(hexadecimal_decimal_frame, text="Convertir a decimal",
+                                           command=convertir_hexadecimal_a_decimal)
+    hexadecimal_decimal_button.pack()
+
+    # Octal a decimal
+    octal_label = tk.Label(octal_decimal_frame, text="Ingrese el número octal:")
+    octal_label.pack()
+    octal_entry = tk.Entry(octal_decimal_frame)
+    octal_entry.pack()
+    octal_decimal_button = tk.Button(octal_decimal_frame, text="Convertir a decimal",
+                                     command=convertir_octal_a_decimal)
+    octal_decimal_button.pack()
+
+    regresar_button = tk.Button(sistemas_numeracion_frame, text="Regresar", command=regresar)
+    regresar_button.pack()
