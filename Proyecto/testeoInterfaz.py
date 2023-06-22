@@ -41,6 +41,18 @@ def entrarPropagErrores():
     main.hide()
 
 #Funciones/utilidades
+def calcularErrorAbs():
+    valorReal=float(calcErrores.textReal.toPlainText())
+    valorAproximado=float(calcErrores.textAprox.toPlainText())
+    errorAbsoluto=Unidad1.calcularErrorAbsoluto(valorReal,valorAproximado)
+    calcErrores.labelResultado.setText("Error absoluto: "+str(errorAbsoluto))
+
+def calcularErrorRelativo():
+    valorReal=float(calcErrores.textReal.toPlainText())
+    valorAproximado=float(calcErrores.textAprox.toPlainText())
+    errorRelativo=Unidad1.calcularErrorRelativo(valorReal,valorAproximado)
+    calcErrores.labelResultado.setText("Error relativo: "+str(errorRelativo))
+
 
 #Asignación de funciones a botones de manejo de interfaz
 main.botonCalError.clicked.connect(entrarCalcError) #Entrar a cálculo de errores
@@ -52,6 +64,11 @@ calcErrores.botonRegresar.clicked.connect(regresarCalcError) #Regresar a main de
 sistNumeros.botonRegresar.clicked.connect(regresarSistNum) #Regresar a main desde sistemas numericos
 sistNumerosIEEE.botonRegresar.clicked.connect(regresarSistNumIEEE) #Entrar a punto flotante
 propagErrores.botonRegresar.clicked.connect(regresarPropagErrores) #Entrar a propagación de errores
+
+
+#Asignación de funciones/utilidades
+calcErrores.botonAbs.clicked.connect(calcularErrorAbs) #Calcular Error Absoluto
+calcErrores.botonRelat.clicked.connect(calcularErrorRelativo) #Calcular Error Relativo
 
 main.show()
 app.exec()
