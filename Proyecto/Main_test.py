@@ -1,3 +1,4 @@
+from Unidad_1 import Unidad1
 def opcion1():
     while True:
         print()
@@ -102,7 +103,7 @@ def mostrar_menu():
     print("3. Punto flotante")
     print("4. Propagacion de errores")
     print("5. Teorema de Bolzano")
-    print("6. Metodo de biseccion")
+    print("6. Método de Bisección")
     print("0. Salir")
     print("====================")
     seleccion = input("Selecciona una opción: ")
