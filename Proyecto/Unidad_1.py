@@ -14,7 +14,7 @@ class Unidad1:
 
     #Calculo de error relativo
     def calcularErrorRelativo(valorReal, valorAproximado):
-      errorRelativo=calcularErrorAbsoluto(valorReal,valorAproximado)/abs(valorReal)
+      errorRelativo=Unidad1.calcularErrorAbsoluto(valorReal,valorAproximado)/abs(valorReal)
       return errorRelativo
 
     #TEMA 2 - SISTEMAS DE NUMERACION
