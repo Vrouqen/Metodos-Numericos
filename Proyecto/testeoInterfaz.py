@@ -126,6 +126,31 @@ def transformarOctalToDecimal():
     decimal=Unidad1.convertirOctalToDecimal(octal)
     sistNumeros.labelNumTransformado.setText(str(decimal))
 
+def solucionDeEcuacion():
+    valorX=float(validadorDecimales(propagErrores.textValorX.toPlainText()))
+    if valorX>0:
+        solucion=Unidad1.solucionDeEcuacion(valorX)
+        propagErrores.labelResultado.setText(str(solucion))
+    else:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Solo se aceptan numeros mayores a 0")
+        msg.exec_()
+        propagErrores.textValorX.setText("")
+
+def mostraGrafica():
+    valorX=float(validadorDecimales(propagErrores.textValorX.toPlainText()))
+    if valorX>0:
+        Unidad1.graficaDeEcuacion(valorX)
+    else:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Solo se aceptan numeros mayores a 0")
+        msg.exec_()
+        propagErrores.textValorX.setText("")
+
 #Asignación de funciones a botones de manejo de interfaz
 main.botonCalError.clicked.connect(entrarCalcError) #Entrar a cálculo de errores
 main.botonSistNum.clicked.connect(entrarSistNum) #Entrar a sistemas numericos
@@ -147,6 +172,8 @@ sistNumeros.botonDecToBin.clicked.connect(transformarDecimalToBinario) #decimal 
 sistNumeros.botonHexaToDec.clicked.connect(transfomarHexadecimalToDecimal) #hexadecimal a decimal
 sistNumeros.botonOctToDec.clicked.connect(transformarOctalToDecimal) #octal a decimal
 
+propagErrores.botonCalcular.clicked.connect(solucionDeEcuacion)#Solución de la ecuación (e^x)/(e^x -1)
+propagErrores.botonGrafico.clicked.connect(mostraGrafica)#Grafica de la funcion
 
 main.show()
 app.exec()
