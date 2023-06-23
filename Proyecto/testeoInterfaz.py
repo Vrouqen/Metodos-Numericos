@@ -151,6 +151,16 @@ def mostraGrafica():
         msg.exec_()
         propagErrores.textValorX.setText("")
 
+def convertirIEE754_32bits():
+    num=float(validadorDecimales(sistNumerosIEEE.textNumero.toPlainText()))
+    convertido=Unidad1.convertirIEE754_32bits(num)
+    sistNumerosIEEE.labelNumTransformado.setText(str(convertido))
+
+def convertirIEE754_64bits():
+    num=float(validadorDecimales(sistNumerosIEEE.textNumero.toPlainText()))
+    convertido=Unidad1.convertirIEE754_64bits(num)
+    sistNumerosIEEE.labelNumTransformado.setText(str(convertido))
+
 #Asignación de funciones a botones de manejo de interfaz
 main.botonCalError.clicked.connect(entrarCalcError) #Entrar a cálculo de errores
 main.botonSistNum.clicked.connect(entrarSistNum) #Entrar a sistemas numericos
@@ -174,6 +184,9 @@ sistNumeros.botonOctToDec.clicked.connect(transformarOctalToDecimal) #octal a de
 
 propagErrores.botonCalcular.clicked.connect(solucionDeEcuacion)#Solución de la ecuación (e^x)/(e^x -1)
 propagErrores.botonGrafico.clicked.connect(mostraGrafica)#Grafica de la funcion
+
+sistNumerosIEEE.boton32bits.clicked.connect(convertirIEE754_32bits)#Conversion de numero a IEE 754 32 bits
+sistNumerosIEEE.boton64bits.clicked.connect(convertirIEE754_64bits)#Conversion de numero a IEE 754 64 bits
 
 main.show()
 app.exec()
