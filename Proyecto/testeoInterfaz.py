@@ -129,8 +129,16 @@ def transformarOctalToDecimal():
 def solucionDeEcuacion():
     valorX = float(validadorDecimales(propagErrores.textValorX.toPlainText()))
     if valorX > 0:
-        solucion = Unidad1.solucionDeEcuacion(valorX)
-        propagErrores.labelResultado.setText(str(solucion))
+        if len(str(valorX)) <= 6:  # Verificar si el valor tiene hasta 6 dígitos
+            solucion = Unidad1.solucionDeEcuacion(valorX)
+            propagErrores.labelResultado.setText(str(solucion))
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Error")
+            msg.setText("Solo se aceptan números de hasta 6 dígitos")
+            msg.exec_()
+            propagErrores.textValorX.setText("")
     else:
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Critical)

@@ -81,25 +81,6 @@ class Unidad1:
         resultado = numerador / denominador
         return resultado
 
-        valorX = float(validadorDecimales(propagErrores.textValorX.toPlainText()))
-        if valorX > 0:
-            if len(str(valorX)) <= 6:  # Verificar si el valor tiene hasta 6 dígitos
-                solucion = Unidad1.solucionDeEcuacion(valorX)
-                propagErrores.labelResultado.setText(str(solucion))
-            else:
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Critical)
-                msg.setWindowTitle("Error")
-                msg.setText("Solo se aceptan números de hasta 6 dígitos")
-                msg.exec_()
-                propagErrores.textValorX.setText("")
-        else:
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Critical)
-            msg.setWindowTitle("Error")
-            msg.setText("Solo se aceptan números mayores a 0")
-            msg.exec_()
-            propagErrores.textValorX.setText("")
 
     #Gráfica de la ecuación (e^x)/(e^x -1)
     def graficaDeEcuacion(valorFinalX):
