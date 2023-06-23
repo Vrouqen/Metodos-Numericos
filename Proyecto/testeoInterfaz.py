@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
-
+#jjojoj
 from Unidad_1 import Unidad1
 
 #Iniciar la aplicación
@@ -127,15 +127,15 @@ def transformarOctalToDecimal():
     sistNumeros.labelNumTransformado.setText(str(decimal))
 
 def solucionDeEcuacion():
-    valorX=float(validadorDecimales(propagErrores.textValorX.toPlainText()))
-    if valorX>0:
-        solucion=Unidad1.solucionDeEcuacion(valorX)
+    valorX = float(validadorDecimales(propagErrores.textValorX.toPlainText()))
+    if valorX > 0:
+        solucion = Unidad1.solucionDeEcuacion(valorX)
         propagErrores.labelResultado.setText(str(solucion))
     else:
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Critical)
         msg.setWindowTitle("Error")
-        msg.setText("Solo se aceptan numeros mayores a 0")
+        msg.setText("Solo se aceptan números mayores a 0")
         msg.exec_()
         propagErrores.textValorX.setText("")
 
