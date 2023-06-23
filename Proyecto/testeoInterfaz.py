@@ -1,4 +1,6 @@
 from PyQt5 import QtWidgets, uic
+from PyQt5.QtWidgets import QMessageBox
+
 from Unidad_1 import Unidad1
 
 #Iniciar la aplicación
@@ -40,19 +42,89 @@ def entrarPropagErrores():
     propagErrores.show()
     main.hide()
 
+#Validaciones
+def validadorDecimales(decimalString):
+    try:
+        decimal=float(decimalString)
+    except:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente el número")
+        msg.exec_()
+        #Hace falta terminar la ejecucion del metodo
+    return decimal
+
+def validarHexadecimales(numeroHexadecimal):
+    try:
+        int(numeroHexadecimal, 16)
+    except ValueError:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente el número hexadecimal")
+        msg.exec_()
+    return numeroHexadecimal
+
+def validarOctales(numeroOctal):
+    try:
+        int(numeroOctal, 8)
+    except ValueError:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente el número octal")
+        msg.exec_()
+    return numeroOctal
+
 #Funciones/utilidades
 def calcularErrorAbs():
-    valorReal=float(calcErrores.textReal.toPlainText())
-    valorAproximado=float(calcErrores.textAprox.toPlainText())
+    valorReal=validadorDecimales(calcErrores.textReal.toPlainText())
+    valorAproximado=validadorDecimales(calcErrores.textAprox.toPlainText())
     errorAbsoluto=Unidad1.calcularErrorAbsoluto(valorReal,valorAproximado)
     calcErrores.labelResultado.setText("Error absoluto: "+str(errorAbsoluto))
 
 def calcularErrorRelativo():
-    valorReal=float(calcErrores.textReal.toPlainText())
-    valorAproximado=float(calcErrores.textAprox.toPlainText())
+    valorReal=validadorDecimales(calcErrores.textReal.toPlainText())
+    valorAproximado=validadorDecimales(calcErrores.textAprox.toPlainText())
     errorRelativo=Unidad1.calcularErrorRelativo(valorReal,valorAproximado)
     calcErrores.labelResultado.setText("Error relativo: "+str(errorRelativo))
 
+def transformarBinarioToDecimal():
+    cadena=sistNumeros.textNumero.toPlainText()
+    print(cadena)
+    valido=False
+    for i in cadena: #Validar correcto ingreso de binarios
+        if i != '0' and i != '1':  # Mensaje de error
+            valido=False
+            break
+        else:
+            valido=True
+
+    if valido==False: #Caso de no haber correctamente el binario
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Unicamente es válido el ingreso de 0 y 1")
+        msg.exec_()
+    else:
+        decimal=Unidad1.convertirBinarioToDecimal(cadena)
+        sistNumeros.labelNumTransformado.setText(str(decimal))
+
+def transformarDecimalToBinario():
+    decimal=int(validadorDecimales(sistNumeros.textNumero.toPlainText()))
+    binario=Unidad1.convertirDecimalToBinario(decimal) #Solo transforma números enteros
+    sistNumeros.labelNumTransformado.setText(str(binario))
+
+def transfomarHexadecimalToDecimal():
+    hexadecimal=validarHexadecimales(sistNumeros.textNumero.toPlainText())
+    decimal=Unidad1.convertirHexadecimalToDecimal(hexadecimal)
+    sistNumeros.labelNumTransformado.setText(str(decimal))
+
+def transformarOctalToDecimal():
+    octal=int(validarOctales(sistNumeros.textNumero.toPlainText()))
+    decimal=Unidad1.convertirOctalToDecimal(octal)
+    sistNumeros.labelNumTransformado.setText(str(decimal))
 
 #Asignación de funciones a botones de manejo de interfaz
 main.botonCalError.clicked.connect(entrarCalcError) #Entrar a cálculo de errores
@@ -69,6 +141,12 @@ propagErrores.botonRegresar.clicked.connect(regresarPropagErrores) #Entrar a pro
 #Asignación de funciones/utilidades
 calcErrores.botonAbs.clicked.connect(calcularErrorAbs) #Calcular Error Absoluto
 calcErrores.botonRelat.clicked.connect(calcularErrorRelativo) #Calcular Error Relativo
+
+sistNumeros.botonBinToDec.clicked.connect(transformarBinarioToDecimal) #binario a decimal
+sistNumeros.botonDecToBin.clicked.connect(transformarDecimalToBinario) #decimal a binario
+sistNumeros.botonHexaToDec.clicked.connect(transfomarHexadecimalToDecimal) #hexadecimal a decimal
+sistNumeros.botonOctToDec.clicked.connect(transformarOctalToDecimal) #octal a decimal
+
 
 main.show()
 app.exec()
