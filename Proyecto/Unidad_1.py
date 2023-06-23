@@ -76,11 +76,13 @@ class Unidad1:
     #TEMA 4 - PROPAGACION DE ERRORES
     #Solución de la ecuación (e^x)/(e^x -1)
     def solucionDeEcuacion(x):
-        numerador = math.exp(x)
-        denominador = math.exp(x) - 1
-        resultado = numerador / denominador
-        return resultado
-
+        try:
+            numerador = math.exp(x)
+            denominador = math.exp(x) - 1
+            resultado = numerador / denominador
+            return resultado
+        except Exception as e:
+            print("Error en el cálculo: ", str(e))
 
     #Gráfica de la ecuación (e^x)/(e^x -1)
     def graficaDeEcuacion(valorFinalX):
