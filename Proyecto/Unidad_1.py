@@ -100,5 +100,8 @@ class Unidad1:
             print("No es válido un número menor a 1")
 
     #TEMA 5 - TEOREMA DE BOLZANO
+    #Falta averiguar usuario ingrese la funcion para llamar al metodo
+
 
     #TEMA 6 - METODO DE BISECCION
+    # Falta averiguar usuario ingrese la funcion para llamar al metodo
