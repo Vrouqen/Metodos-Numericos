@@ -27,23 +27,23 @@
      <string>Regresar</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelValorX">
+   <widget class="QLabel" name="labelValorInf">
     <property name="geometry">
      <rect>
       <x>130</x>
       <y>120</y>
-      <width>81</width>
+      <width>161</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Valor de x:</string>
+     <string>Valor inferior del intervalo:</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textValorX">
+   <widget class="QTextEdit" name="textValorInf">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>340</x>
       <y>120</y>
       <width>141</width>
       <height>21</height>
@@ -77,19 +77,6 @@
     </property>
     <property name="text">
      <string>Mostrar gráfico</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelResultado">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>120</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="labelFuncion">
@@ -131,6 +118,45 @@
      <string>Ayuda</string>
     </property>
    </widget>
+   <widget class="QLabel" name="labelValorSup">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>160</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Valor superior del Intervalo:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textValorX_2">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>160</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelResultado">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>130</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -138,7 +164,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
