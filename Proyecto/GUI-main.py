@@ -12,6 +12,7 @@ calcErrores=uic.loadUi("CalculoErrores.ui")
 sistNumeros=uic.loadUi("SistemasNumeros.ui")
 sistNumerosIEEE=uic.loadUi("SistemasNumeracionIEEE.ui")
 propagErrores=uic.loadUi("PropagacionErrores.ui")
+teoremaBolzano=uic.loadUi("TeoremaBolzano.ui")
 
 #Funciones de manejo de interfaz
 def regresarCalcError():
@@ -41,6 +42,14 @@ def regresarPropagErrores():
 def entrarPropagErrores():
     propagErrores.show()
     main.hide()
+
+def regresarBolzano():
+    main.show()
+    teoremaBolzano.hide()
+def entrarBolzano():
+    teoremaBolzano.show()
+    main.hide()
+
 
 #Validaciones
 def validadorEnteros(decimalString):
@@ -227,12 +236,13 @@ main.botonCalError.clicked.connect(entrarCalcError) #Entrar a cálculo de errore
 main.botonSistNum.clicked.connect(entrarSistNum) #Entrar a sistemas numericos
 main.botonPuntoFlot.clicked.connect(entrarSistNumIEEE) #Entrar a punto flotante
 main.botonPropError.clicked.connect(entrarPropagErrores) #Entrar a propagación de errores
+main.botonBolzano.clicked.connect(entrarBolzano) #Entrar a Teorema de Bolzando
 
 calcErrores.botonRegresar.clicked.connect(regresarCalcError) #Regresar a main desde cálculo de errores
 sistNumeros.botonRegresar.clicked.connect(regresarSistNum) #Regresar a main desde sistemas numericos
-sistNumerosIEEE.botonRegresar.clicked.connect(regresarSistNumIEEE) #Entrar a punto flotante
-propagErrores.botonRegresar.clicked.connect(regresarPropagErrores) #Entrar a propagación de errores
-
+sistNumerosIEEE.botonRegresar.clicked.connect(regresarSistNumIEEE) #Regresar a main desde punto flotante
+propagErrores.botonRegresar.clicked.connect(regresarPropagErrores) #Regresar a main desde propagación de errores
+teoremaBolzano.botonRegresar.clicked.connect(regresarBolzano) #Regresar a main desde Teorema Bolzano
 
 #Asignación de funciones/utilidades
 calcErrores.botonAbs.clicked.connect(calcularErrorAbs) #Calcular Error Absoluto
