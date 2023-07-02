@@ -85,9 +85,9 @@ class Unidad1:
             print("Error en el cálculo: ", str(e))
 
     #Gráfica de la ecuación (e^x)/(e^x -1)
-    def graficaDeEcuacion(valorFinalX):
-        if(valorFinalX>1):
-            valorX=1
+    def graficaDeEcuacion(valorIncialX,valorFinalX):
+        if(valorFinalX>valorIncialX):
+            valorX=valorIncialX
             valoresY=[]
             valoresX=[]
             while valorX<=valorFinalX:
@@ -100,8 +100,22 @@ class Unidad1:
             print("No es válido un número menor a 1")
 
     #TEMA 5 - TEOREMA DE BOLZANO
-    #Falta averiguar usuario ingrese la funcion para llamar al metodo
-
+    def teoremaBolzano(a, b):
+        if a * b < 0:
+            return True
+        else:
+            return False
 
     #TEMA 6 - METODO DE BISECCION
-    # Falta averiguar usuario ingrese la funcion para llamar al metodo
+    def metodoBiseccion(a, b, c,precision):
+        if a * b >= 0:
+            print("La función en el punto A debe ser de signo opuesto a el punto B")
+        while (b - a) / 2 > precision:
+            #c = (a + b) / 2
+            if c == 0:
+                return c
+            elif a * c < 0:
+                b = c
+            else:
+                a = c
+        return (a + b) / 2
