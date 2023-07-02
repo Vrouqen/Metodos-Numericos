@@ -1,6 +1,5 @@
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
-#jjojoj
 from Unidad_1 import Unidad1
 
 #Iniciar la aplicación
