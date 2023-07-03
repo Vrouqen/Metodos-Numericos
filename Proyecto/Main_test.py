@@ -87,7 +87,7 @@ def opcion4():
         elif seleccion=="2":
             max=float(input("Ingrese hata que valor de x será la gráfica > "))
             if max>1:
-                Unidad1.graficaDeEcuacion(max)
+                Unidad1.graficaDeEcuacionPropagacionErrores(max)
             else:
                 print("No se admiten valores menores que uno")
         elif seleccion=="0":

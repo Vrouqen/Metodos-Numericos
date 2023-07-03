@@ -131,19 +131,6 @@
      <string>Valor superior del Intervalo:</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textValorX_2">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>160</y>
-      <width>141</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="verticalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelResultado">
     <property name="geometry">
      <rect>
@@ -157,6 +144,19 @@
      <string/>
     </property>
    </widget>
+   <widget class="QTextEdit" name="textValorInf">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>160</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -164,7 +164,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

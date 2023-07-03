@@ -85,7 +85,7 @@ class Unidad1:
             print("Error en el cálculo: ", str(e))
 
     #Gráfica de la ecuación (e^x)/(e^x -1)
-    def graficaDeEcuacion(valorIncialX,valorFinalX):
+    def graficaDeEcuacionPropagacionErrores(valorIncialX, valorFinalX):
         if(valorFinalX>valorIncialX):
             valorX=valorIncialX
             valoresY=[]
@@ -100,22 +100,48 @@ class Unidad1:
             print("No es válido un número menor a 1")
 
     #TEMA 5 - TEOREMA DE BOLZANO
-    def teoremaBolzano(a, b):
-        if a * b < 0:
+    def transformarAFuncion(x, funcionStr):
+        try:
+            return eval(funcionStr)
+        except:
+            print("Ecuación mal ingresada")
+
+    def graficarFuncion(valorIncialX, valorFinalX, funcion):
+        valorX=valorIncialX
+        valoresX=[]
+        valoresY=[]
+        while valorX<=valorFinalX:
+            valoresX.append([valorX])  # arreglo de valores de x
+            valoresY.append([Unidad1.transformarAFuncion(valorX,funcion)])  # arreglo de valores en y con respectivo cálculo
+            valorX += 0.1  # Incremento pequeño para mostrar más presición en el gráfico
+        plt.plot(valoresX, valoresY)  # Se crea el gráfico
+        valorYInf = Unidad1.transformarAFuncion(valorIncialX, funcion)
+        valorYSup = Unidad1.transformarAFuncion(valorFinalX, funcion)
+        if valorIncialX <= 0 and valorFinalX >= 0:
+            plt.plot([valorIncialX, valorFinalX], [0, 0], color='black')  # Dibuja la linea del eje X
+        if valorYInf <= 0 and valorYSup >= 0:
+            plt.plot([0, 0], [valorYInf, valorYSup], color='black')  # Dibuja la linea del eje Y
+        plt.show()  # Se imprime el gráfico
+
+    def teoremaBolzano(valorInf, valorSup, funcion):
+        valorYInf=Unidad1.transformarAFuncion(valorInf,funcion)
+        valorYSup=Unidad1.transformarAFuncion(valorSup,funcion)
+        if valorYInf * valorYSup < 0:
             return True
         else:
             return False
 
     #TEMA 6 - METODO DE BISECCION
-    def metodoBiseccion(a, b, c,precision):
-        if a * b >= 0:
-            print("La función en el punto A debe ser de signo opuesto a el punto B")
-        while (b - a) / 2 > precision:
-            #c = (a + b) / 2
-            if c == 0:
+    def metodoBiseccion(valorInf, valorSup, precision, funcion):
+        valorYInf=Unidad1.transformarAFuncion(valorInf,funcion)
+        valorYSup=Unidad1.transformarAFuncion(valorSup,funcion)
+        while (valorSup-valorInf)/2 > precision:
+            c = (valorInf+valorSup)/2
+            valorYC=Unidad1.transformarAFuncion(c,funcion)
+            if valorYC == 0:
                 return c
-            elif a * c < 0:
-                b = c
+            elif valorYInf*valorYC<0:
+                valorSup=c
             else:
-                a = c
-        return (a + b) / 2
+                valorInf=c
+        return (valorInf + valorSup) / 2

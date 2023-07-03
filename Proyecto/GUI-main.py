@@ -209,11 +209,11 @@ def solucionDeEcuacion():
     else:
         propagErrores.textValorX.setText("")
 
-def mostraGrafica():
+def mostraGraficaPropagacionErrores():
     if validadorDecimales(propagErrores.textValorX.toPlainText()):
         valorXSup=float(propagErrores.textValorX.toPlainText())
         if valorXSup>0:
-            Unidad1.graficaDeEcuacion(1,valorXSup)
+            Unidad1.graficaDeEcuacionPropagacionErrores(1, valorXSup)
         else:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Critical)
@@ -239,27 +239,14 @@ def convertirIEE754_64bits():
     else:
         sistNumerosIEEE.textNumero.setText("")
 
-def transformarAFuncion(x,funcion_str):
-    try:
-        return eval(funcion_str)
-    except:
-        msg = QMessageBox()
-        msg.setIcon(QMessageBox.Critical)
-        msg.setWindowTitle("Error")
-        msg.setText("Ingrese correctamente la función")
-        msg.exec_()
 
 def calcularTeoremaBolzano():
-    valido=validadorDecimales(teoremaBolzano.textValorInf.toPlainText())
-    valido1=validadorDecimales(teoremaBolzano.textValorX_2.toPlainText())
-    if valido == True and valido1==True:
+    if validadorDecimales(teoremaBolzano.textValorInf.toPlainText()) and validadorDecimales(teoremaBolzano.textValorSup.toPlainText()):
         valorInf=float(teoremaBolzano.textValorInf.toPlainText())
-        valorSup=float(teoremaBolzano.textValorX_2.toPlainText())
+        valorSup=float(teoremaBolzano.textValorSup.toPlainText())
         if valorInf < valorSup:
-            funcion_str=teoremaBolzano.textFuncion.toPlainText()
-            valorYInf=transformarAFuncion(valorInf,funcion_str)
-            valorYSup=transformarAFuncion(valorSup,funcion_str)
-            respuesta=Unidad1.teoremaBolzano(valorYInf,valorYSup)
+            funcion=teoremaBolzano.textFuncion.toPlainText()
+            respuesta=Unidad1.teoremaBolzano(valorInf,valorSup,funcion)
             if respuesta==True:
                 teoremaBolzano.labelResultado.setText("Existe una raíz en el intervalo dado")
             else:
@@ -270,36 +257,94 @@ def calcularTeoremaBolzano():
             msg.setWindowTitle("Error")
             msg.setText("Ingrese correctamente el intervalo")
             msg.exec_()
-            propagErrores.textValorX.setText("")
+            teoremaBolzano.textValorInf.setText("")
+            teoremaBolzano.textValorSup.setText("")
+    else:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente los números")
+        msg.exec_()
+        teoremaBolzano.textValorInf.setText("")
+        teoremaBolzano.textValorSup.setText("")
 
-def mostraGraficaBolzano():
-    valido = validadorDecimales(teoremaBolzano.textValorInf.toPlainText())
-    valido1 = validadorDecimales(teoremaBolzano.textValorX_2.toPlainText())
-    if valido == True and valido1 == True:
+def mostrarGraficaFuncionBolzano():
+    if validadorDecimales(teoremaBolzano.textValorInf.toPlainText()) and validadorDecimales(teoremaBolzano.textValorSup.toPlainText()):
         valorInf = float(teoremaBolzano.textValorInf.toPlainText())
-        valorSup = float(teoremaBolzano.textValorX_2.toPlainText())
+        valorSup = float(teoremaBolzano.textValorSup.toPlainText())
         if valorInf < valorSup:
-            valoresX=[]
-            valoresY=[]
-            valorX=valorInf
-            while valorX <= valorSup:
-                valoresX.append([valorX])
-                valoresY.append([transformarAFuncion(valorX,teoremaBolzano.textFuncion.toPlainText())])
-                valorX += 0.1
-            plt.plot(valoresX,valoresY)
-            valorYInf=transformarAFuncion(valorInf,teoremaBolzano.textFuncion.toPlainText())
-            valorYSup=transformarAFuncion(valorSup,teoremaBolzano.textFuncion.toPlainText())
-            if valorInf <= 0 and valorSup >= 0:
-                plt.plot([valorInf, valorSup], [0, 0], color='black')  # Dibuja la linea del eje X
-            if valorYInf <=0 and valorYSup >= 0:
-                plt.plot([0, 0], [valorYInf, valorYSup], color='black')  # Dibuja la linea del eje Y
-            plt.show()
+            funcion = teoremaBolzano.textFuncion.toPlainText()
+            Unidad1.graficarFuncion(valorInf,valorSup,funcion)
         else:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Critical)
             msg.setWindowTitle("Error")
             msg.setText("Ingrese correctamente el intervalo")
             msg.exec_()
+            teoremaBolzano.textValorInf.setText("")
+            teoremaBolzano.textValorSup.setText("")
+    else:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente los números")
+        msg.exec_()
+        teoremaBolzano.textValorInf.setText("")
+        teoremaBolzano.textValorSup.setText("")
+
+def mostrarGraficaFuncionBiseccion():
+    validarInf=validadorDecimales(metodoBiseccion.textValorInf.toPlainText())
+    validarSup=validadorDecimales(metodoBiseccion.textValorSup.toPlainText())
+    print("entro al if")
+    if validarInf==True and validarSup==True:
+        print("entro al if")
+        valorInf = float(metodoBiseccion.textValorInf.toPlainText())
+        valorSup = float(metodoBiseccion.textValorSup.toPlainText())
+        if valorInf < valorSup:
+            funcion = metodoBiseccion.textFuncion.toPlainText()
+            Unidad1.graficarFuncion(valorInf,valorSup,funcion)
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Error")
+            msg.setText("Ingrese correctamente el intervalo")
+            msg.exec_()
+            metodoBiseccion.textValorInf.setText("")
+            metodoBiseccion.textValorSup.setText("")
+    else:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente los números")
+        msg.exec_()
+        metodoBiseccion.textValorInf.setText("")
+        metodoBiseccion.textValorSup.setText("")
+
+def calcularMétodoBisección():
+    if validadorDecimales(metodoBiseccion.textValorInf.toPlainText()) and validadorDecimales(metodoBiseccion.textValorSup.toPlainText()):
+        valorInf=float(metodoBiseccion.textValorInf.toPlainText())
+        valorSup=float(metodoBiseccion.textValorSup.toPlainText())
+        if valorInf < valorSup:
+            funcion=metodoBiseccion.textFuncion.toPlainText()
+            respuesta=Unidad1.metodoBiseccion(valorInf,valorSup,0.0001,funcion)
+            metodoBiseccion.labelResultado.setText("La raíz en el intervalo es "+str(respuesta))
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Error")
+            msg.setText("Ingrese correctamente el intervalo")
+            msg.exec_()
+            metodoBiseccion.textValorInf.setText("")
+            metodoBiseccion.textValorSup.setText("")
+    else:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente los números")
+        msg.exec_()
+        metodoBiseccion.textValorInf.setText("")
+        metodoBiseccion.textValorSup.setText("")
+
 
 
 #Asignación de funciones a botones de manejo de interfaz
@@ -327,14 +372,16 @@ sistNumeros.botonHexaToDec.clicked.connect(transfomarHexadecimalToDecimal) #hexa
 sistNumeros.botonOctToDec.clicked.connect(transformarOctalToDecimal) #octal a decimal
 
 propagErrores.botonCalcular.clicked.connect(solucionDeEcuacion)#Solución de la ecuación (e^x)/(e^x -1)
-propagErrores.botonGrafico.clicked.connect(mostraGrafica)#Grafica de la funcion
+propagErrores.botonGrafico.clicked.connect(mostraGraficaPropagacionErrores)#Grafica de la funcion
 
 sistNumerosIEEE.boton32bits.clicked.connect(convertirIEE754_32bits)#Conversion de numero a IEE 754 32 bits
 sistNumerosIEEE.boton64bits.clicked.connect(convertirIEE754_64bits)#Conversion de numero a IEE 754 64 bits
 
 teoremaBolzano.botonCalcular.clicked.connect(calcularTeoremaBolzano)#Calcula el Teorema de bolzano
-teoremaBolzano.botonGrafico.clicked.connect(mostraGraficaBolzano)#Grafica del Teoreama de bolzano
+teoremaBolzano.botonGrafico.clicked.connect(mostrarGraficaFuncionBolzano)#Grafica del Teoreama de bolzano
 
+metodoBiseccion.botonCalcular.clicked.connect(calcularMétodoBisección)#Calcula el método de Bisección
+metodoBiseccion.botonGrafico.clicked.connect(mostrarGraficaFuncionBiseccion)#Grafica del método de Bisección
 
 main.show()
 app.exec()
