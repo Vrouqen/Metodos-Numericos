@@ -58,6 +58,9 @@ def entrarBiseccion():
     metodoBiseccion.show()
     main.hide()
 
+def cerrarPrograma():
+    main.close()
+
 
 #Validaciones
 def validadorEnteros(decimalString):
@@ -355,6 +358,7 @@ main.botonPuntoFlot.clicked.connect(entrarSistNumIEEE) #Entrar a punto flotante
 main.botonPropError.clicked.connect(entrarPropagErrores) #Entrar a propagación de errores
 main.botonBolzano.clicked.connect(entrarBolzano) #Entrar a Teorema de Bolzando
 main.botonBiseccion.clicked.connect(entrarBiseccion)#entra a Metodo de Biseccion
+main.botonSalir.clicked.connect(cerrarPrograma)#Sale del programa
 
 calcErrores.botonRegresar.clicked.connect(regresarCalcError) #Regresar a main desde cálculo de errores
 sistNumeros.botonRegresar.clicked.connect(regresarSistNum) #Regresar a main desde sistemas numericos
