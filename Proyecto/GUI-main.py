@@ -349,7 +349,14 @@ def calcularMétodoBisección():
         metodoBiseccion.textValorInf.setText("")
         metodoBiseccion.textEdit.setText("")
 
-
+def ayuda():
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.Critical)
+    msg.setWindowTitle("Ayuda")
+    msg.setText("Un ejemplo para insertar una ecuacion de buena forma es: (x**(3+2x))/x+3x**4")
+    msg.exec_()
+    metodoBiseccion.textValorInf.setText("")
+    metodoBiseccion.textEdit.setText("")
 
 #Asignación de funciones a botones de manejo de interfaz
 main.botonCalError.clicked.connect(entrarCalcError) #Entrar a cálculo de errores
@@ -384,9 +391,11 @@ sistNumerosIEEE.boton64bits.clicked.connect(convertirIEE754_64bits)#Conversion d
 
 teoremaBolzano.botonCalcular.clicked.connect(calcularTeoremaBolzano)#Calcula el Teorema de bolzano
 teoremaBolzano.botonGrafico.clicked.connect(mostrarGraficaFuncionBolzano)#Grafica del Teoreama de bolzano
+teoremaBolzano.botonAyuda.clicked.connect(ayuda)#Boton de ayuda para ingresar la función
 
 metodoBiseccion.botonCalcular.clicked.connect(calcularMétodoBisección)#Calcula el método de Bisección
 metodoBiseccion.botonGrafico.clicked.connect(mostrarGraficaFuncionBiseccion)#Grafica del método de Bisección
+metodoBiseccion.botonAyuda.clicked.connect(ayuda)#Boton de ayuda para ingresar la función
 
 main.show()
 app.exec()
