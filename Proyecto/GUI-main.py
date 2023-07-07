@@ -295,9 +295,7 @@ def mostrarGraficaFuncionBolzano():
 def mostrarGraficaFuncionBiseccion():
     validarInf=validadorDecimales(metodoBiseccion.textValorInf.toPlainText())
     validarSup=validadorDecimales(metodoBiseccion.textEdit.toPlainText())
-    print("entro al if")
     if validarInf==True and validarSup==True:
-        print("entro al if")
         valorInf = float(metodoBiseccion.textValorInf.toPlainText())
         valorSup = float(metodoBiseccion.textEdit.toPlainText())
         if valorInf < valorSup:
@@ -321,15 +319,12 @@ def mostrarGraficaFuncionBiseccion():
         metodoBiseccion.textEdit.setText("")
 
 def calcularMétodoBisección():
-    print("Entro")
     print(validadorDecimales(metodoBiseccion.textValorInf.toPlainText()))
     print(validadorDecimales(metodoBiseccion.textEdit.toPlainText()))
     if validadorDecimales(metodoBiseccion.textValorInf.toPlainText()) and validadorDecimales(metodoBiseccion.textEdit.toPlainText()):
-        print("Pasó if")
         valorInf=float(metodoBiseccion.textValorInf.toPlainText())
         valorSup=float(metodoBiseccion.textEdit.toPlainText())
         if valorInf < valorSup:
-            print("Intervalo correctamente ingresado")
             funcion=metodoBiseccion.textFuncion.toPlainText()
             respuesta=Unidad1.metodoBiseccion(valorInf,valorSup,0.0001,funcion)
             metodoBiseccion.labelResultado.setText("La raíz en el intervalo es "+str(respuesta))
