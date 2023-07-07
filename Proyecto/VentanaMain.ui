@@ -11,17 +11,32 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Menú principal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(47, 47, 47);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="botonCalError">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>150</y>
-      <width>95</width>
-      <height>23</height>
+      <x>130</x>
+      <y>130</y>
+      <width>191</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Cálculo de Errores</string>
@@ -30,11 +45,23 @@
    <widget class="QPushButton" name="botonSistNum">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>190</y>
-      <width>123</width>
-      <height>23</height>
+      <x>130</x>
+      <y>210</y>
+      <width>191</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Sistemas de numeración</string>
@@ -43,11 +70,23 @@
    <widget class="QPushButton" name="botonPuntoFlot">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>230</y>
-      <width>77</width>
-      <height>23</height>
+      <x>130</x>
+      <y>290</y>
+      <width>191</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Punto flotante</string>
@@ -56,11 +95,23 @@
    <widget class="QPushButton" name="botonPropError">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>270</y>
-      <width>120</width>
-      <height>23</height>
+      <x>500</x>
+      <y>130</y>
+      <width>181</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Propagación de errores</string>
@@ -69,11 +120,23 @@
    <widget class="QPushButton" name="botonBolzano">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>310</y>
-      <width>105</width>
-      <height>23</height>
+      <x>500</x>
+      <y>210</y>
+      <width>181</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Teorema de Bolzano</string>
@@ -82,11 +145,23 @@
    <widget class="QPushButton" name="botonBiseccion">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>350</y>
-      <width>105</width>
-      <height>23</height>
+      <x>500</x>
+      <y>290</y>
+      <width>181</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Método de Bisección</string>
@@ -95,14 +170,54 @@
    <widget class="QPushButton" name="botonSalir">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>400</y>
-      <width>75</width>
-      <height>23</height>
+      <x>650</x>
+      <y>380</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Salir</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTitulo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>801</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>24</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
+    </property>
+    <property name="text">
+     <string>Métodos Numéricos</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

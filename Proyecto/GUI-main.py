@@ -123,6 +123,7 @@ def calcularErrorAbs():
         valorAproximado=float(calcErrores.textAprox.toPlainText())
         errorAbsoluto=Unidad1.calcularErrorAbsoluto(valorReal,valorAproximado)
         calcErrores.labelResultado.setText("Error absoluto: "+str(errorAbsoluto))
+        print("final")
     else:
         calcErrores.textReal.setText("")
         calcErrores.textAprox.setText("")
