@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Método de Bisección</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(47, 47, 47);</string>
@@ -20,11 +20,23 @@
    <widget class="QPushButton" name="botonRegresar">
     <property name="geometry">
      <rect>
-      <x>690</x>
-      <y>410</y>
-      <width>75</width>
-      <height>23</height>
+      <x>594</x>
+      <y>392</y>
+      <width>171</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Regresar</string>
@@ -33,11 +45,22 @@
    <widget class="QLabel" name="labelValorInf">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>120</y>
-      <width>161</width>
+      <x>50</x>
+      <y>170</y>
+      <width>231</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="text">
      <string>Valor inferior del intervalo:</string>
@@ -46,11 +69,20 @@
    <widget class="QTextEdit" name="textValorInf">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>120</y>
+      <x>310</x>
+      <y>160</y>
       <width>141</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="verticalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -59,11 +91,23 @@
    <widget class="QPushButton" name="botonCalcular">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>230</y>
-      <width>61</width>
-      <height>23</height>
+      <x>40</x>
+      <y>280</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Calcular</string>
@@ -72,11 +116,23 @@
    <widget class="QPushButton" name="botonGrafico">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>230</y>
-      <width>91</width>
-      <height>23</height>
+      <x>200</x>
+      <y>280</y>
+      <width>171</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Mostrar gráfico</string>
@@ -85,11 +141,22 @@
    <widget class="QLabel" name="labelFuncion">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>80</y>
-      <width>61</width>
+      <x>50</x>
+      <y>130</y>
+      <width>181</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="text">
      <string>Función:</string>
@@ -98,11 +165,20 @@
    <widget class="QTextEdit" name="textFuncion">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>80</y>
+      <x>310</x>
+      <y>120</y>
       <width>141</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="verticalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
@@ -112,10 +188,22 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>420</y>
-      <width>61</width>
-      <height>23</height>
+      <y>392</y>
+      <width>111</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
     </property>
     <property name="text">
      <string>Ayuda</string>
@@ -124,11 +212,22 @@
    <widget class="QLabel" name="labelValorSup">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>160</y>
-      <width>171</width>
+      <x>50</x>
+      <y>210</y>
+      <width>241</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="text">
      <string>Valor superior del Intervalo:</string>
@@ -137,11 +236,20 @@
    <widget class="QLabel" name="labelResultado">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>130</y>
-      <width>181</width>
-      <height>31</height>
+      <x>490</x>
+      <y>170</y>
+      <width>231</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="text">
      <string/>
@@ -150,14 +258,69 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>160</y>
+      <x>310</x>
+      <y>200</y>
       <width>141</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
     </property>
     <property name="verticalScrollBarPolicy">
      <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTema">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>791</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>24</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
+    </property>
+    <property name="text">
+     <string>METODO DE BISECCION</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelResultadoTxt">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>120</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);</string>
+    </property>
+    <property name="text">
+     <string>Resultado:</string>
     </property>
    </widget>
   </widget>
