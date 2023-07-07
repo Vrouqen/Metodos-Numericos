@@ -294,12 +294,12 @@ def mostrarGraficaFuncionBolzano():
 
 def mostrarGraficaFuncionBiseccion():
     validarInf=validadorDecimales(metodoBiseccion.textValorInf.toPlainText())
-    validarSup=validadorDecimales(metodoBiseccion.textValorSup.toPlainText())
+    validarSup=validadorDecimales(metodoBiseccion.textEdit.toPlainText())
     print("entro al if")
     if validarInf==True and validarSup==True:
         print("entro al if")
         valorInf = float(metodoBiseccion.textValorInf.toPlainText())
-        valorSup = float(metodoBiseccion.textValorSup.toPlainText())
+        valorSup = float(metodoBiseccion.textEdit.toPlainText())
         if valorInf < valorSup:
             funcion = metodoBiseccion.textFuncion.toPlainText()
             Unidad1.graficarFuncion(valorInf,valorSup,funcion)
@@ -310,7 +310,7 @@ def mostrarGraficaFuncionBiseccion():
             msg.setText("Ingrese correctamente el intervalo")
             msg.exec_()
             metodoBiseccion.textValorInf.setText("")
-            metodoBiseccion.textValorSup.setText("")
+            metodoBiseccion.textEdit.setText("")
     else:
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Critical)
@@ -318,13 +318,18 @@ def mostrarGraficaFuncionBiseccion():
         msg.setText("Ingrese correctamente los números")
         msg.exec_()
         metodoBiseccion.textValorInf.setText("")
-        metodoBiseccion.textValorSup.setText("")
+        metodoBiseccion.textEdit.setText("")
 
 def calcularMétodoBisección():
-    if validadorDecimales(metodoBiseccion.textValorInf.toPlainText()) and validadorDecimales(metodoBiseccion.textValorSup.toPlainText()):
+    print("Entro")
+    print(validadorDecimales(metodoBiseccion.textValorInf.toPlainText()))
+    print(validadorDecimales(metodoBiseccion.textEdit.toPlainText()))
+    if validadorDecimales(metodoBiseccion.textValorInf.toPlainText()) and validadorDecimales(metodoBiseccion.textEdit.toPlainText()):
+        print("Pasó if")
         valorInf=float(metodoBiseccion.textValorInf.toPlainText())
-        valorSup=float(metodoBiseccion.textValorSup.toPlainText())
+        valorSup=float(metodoBiseccion.textEdit.toPlainText())
         if valorInf < valorSup:
+            print("Intervalo correctamente ingresado")
             funcion=metodoBiseccion.textFuncion.toPlainText()
             respuesta=Unidad1.metodoBiseccion(valorInf,valorSup,0.0001,funcion)
             metodoBiseccion.labelResultado.setText("La raíz en el intervalo es "+str(respuesta))
@@ -343,7 +348,7 @@ def calcularMétodoBisección():
         msg.setText("Ingrese correctamente los números")
         msg.exec_()
         metodoBiseccion.textValorInf.setText("")
-        metodoBiseccion.textValorSup.setText("")
+        metodoBiseccion.textEdit.setText("")
 
 
 
