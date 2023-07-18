@@ -8,13 +8,13 @@ import matplotlib.pyplot as plt #Gráficos
 app=QtWidgets.QApplication([])
 
 #Cargar archivos .ui
-main=uic.loadUi("VentanaMain.ui")
-calcErrores=uic.loadUi("CalculoErrores.ui")
-sistNumeros=uic.loadUi("SistemasNumeros.ui")
-sistNumerosIEEE=uic.loadUi("SistemasNumeracionIEEE.ui")
-propagErrores=uic.loadUi("PropagacionErrores.ui")
-teoremaBolzano=uic.loadUi("TeoremaBolzano.ui")
-metodoBiseccion=uic.loadUi("MetodoBiseccion.ui")
+main=uic.loadUi("interfaz/VentanaMain.ui")
+calcErrores=uic.loadUi("interfaz/CalculoErrores.ui")
+sistNumeros=uic.loadUi("interfaz/SistemasNumeros.ui")
+sistNumerosIEEE=uic.loadUi("interfaz/SistemasNumeracionIEEE.ui")
+propagErrores=uic.loadUi("interfaz/PropagacionErrores.ui")
+teoremaBolzano=uic.loadUi("interfaz/TeoremaBolzano.ui")
+metodoBiseccion=uic.loadUi("interfaz/MetodoBiseccion.ui")
 
 #Funciones de manejo de interfaz
 def regresarCalcError():
