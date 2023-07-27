@@ -3,6 +3,7 @@
 import struct #Conversiones de formato IEE 754
 import math #Propagación de errores
 import matplotlib.pyplot as plt #Gráficos
+from Proyecto.unidades.Archivos import ManejoArchivos
 
 class Unidad1:
 
@@ -10,11 +11,13 @@ class Unidad1:
     #Calculo de error absoluto
     def calcularErrorAbsoluto(valorReal, valorAproximado):
       errorAbsoluto=abs(valorReal-valorAproximado)
+      ManejoArchivos.almacenarDatosErrores(1,valorReal,valorAproximado,errorAbsoluto,"archivos\Errores.txt")
       return errorAbsoluto
 
     #Calculo de error relativo
     def calcularErrorRelativo(valorReal, valorAproximado):
-      errorRelativo=Unidad1.calcularErrorAbsoluto(valorReal,valorAproximado)/abs(valorReal)
+      errorRelativo=abs(valorReal-valorAproximado)/abs(valorReal)
+      ManejoArchivos.almacenarDatosErrores(2,valorReal,valorAproximado,errorRelativo,"archivos\Errores.txt")
       return errorRelativo
 
     #TEMA 2 - SISTEMAS DE NUMERACION
