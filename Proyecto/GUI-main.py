@@ -1,8 +1,6 @@
-import matplotlib.pyplot as plt
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
-from Unidad_1 import Unidad1
-import matplotlib.pyplot as plt #Gráficos
+from Proyecto.unidades.Unidad_1 import Unidad1
 
 #Iniciar la aplicación
 app=QtWidgets.QApplication([])
