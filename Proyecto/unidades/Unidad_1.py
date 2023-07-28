@@ -160,4 +160,5 @@ class Unidad1:
                 valorSup=c
             else:
                 valorInf=c
-        return (valorInf + valorSup) / 2
+        resultado=(valorInf + valorSup) / 2
+        return resultado
