@@ -144,6 +144,7 @@ class Unidad1:
             raiz=True
         else:
             raiz=False
+        ManejoArchivos.almacenarDatosBolzano(valorInf,valorSup,funcion,raiz)
         return raiz
 
     #TEMA 6 - METODO DE BISECCION

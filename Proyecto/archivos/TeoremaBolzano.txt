@@ -1,0 +1,10 @@
+Funcion: x**2-2
+ValorInferior: -2.0
+ValorSuperior: 2.0
+Raiz: False
+
+Funcion: x**2-2
+ValorInferior: -2.0
+ValorSuperior: 0.0
+Raiz: True
+
