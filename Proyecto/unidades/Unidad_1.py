@@ -149,6 +149,8 @@ class Unidad1:
 
     #TEMA 6 - METODO DE BISECCION
     def metodoBiseccion(valorInf, valorSup, precision, funcion):
+        valorInfAlmacenado=valorInf
+        valorSupAlmacenado = valorSup
         valorYInf=Unidad1.transformarAFuncion(valorInf,funcion)
         valorYSup=Unidad1.transformarAFuncion(valorSup,funcion)
         while (valorSup-valorInf)/2 > precision:
@@ -161,4 +163,5 @@ class Unidad1:
             else:
                 valorInf=c
         resultado=(valorInf + valorSup) / 2
+        ManejoArchivos.almacenarDatosBiseccion(valorInfAlmacenado,valorSupAlmacenado,funcion,resultado)
         return resultado

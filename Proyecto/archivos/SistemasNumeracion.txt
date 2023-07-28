@@ -1,6 +1,8 @@
-NumeroBinario: 123
-NumeroDecimal: 1111011
-
+FechaGenerado: 2023-07-27 21:44:40.844479
 NumeroBinario: 1001
 NumeroDecimal: 9
+
+FechaGenerado: 2023-07-27 21:44:42.923924
+NumeroDecimal: 2314
+NumeroBinario: 100100001010
 

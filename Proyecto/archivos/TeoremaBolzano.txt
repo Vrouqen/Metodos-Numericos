@@ -1,8 +1,4 @@
-Funcion: x**2-2
-ValorInferior: -2.0
-ValorSuperior: 2.0
-Raiz: False
-
+FechaGenerado: 2023-07-27 21:45:09.382940
 Funcion: x**2-2
 ValorInferior: -2.0
 ValorSuperior: 0.0

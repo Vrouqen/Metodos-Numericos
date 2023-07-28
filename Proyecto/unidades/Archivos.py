@@ -15,6 +15,7 @@ class ManejoArchivos:
     def almacenarDatosSistemasNumeracion(tipoTransformacion,numOriginal,numTransformado):
         # Esta función almacena los datos en un archivo
         with open("archivos\SistemasNumeracion.txt", 'a') as archivo:
+            archivo.write("FechaGenerado: {}\n".format(datetime.now()))
             if tipoTransformacion==1:
                 archivo.write("NumeroBinario: {}\n".format(numOriginal))
                 archivo.write("NumeroDecimal: {}\n".format(numTransformado))
@@ -31,6 +32,7 @@ class ManejoArchivos:
 
     def almacenarDatosIEE(tipoTransformacion, numOriginal, numTransformado):
         with open("archivos\IEEE.txt", 'a') as archivo:
+            archivo.write("FechaGenerado: {}\n".format(datetime.now()))
             if tipoTransformacion==1:
                 archivo.write("NumeroDecimal: {}\n".format(numOriginal))
                 archivo.write("Numero32bits: {}\n".format(numTransformado))
@@ -41,12 +43,22 @@ class ManejoArchivos:
 
     def almacenarDatosPropagacion(valorx,valory):
         with open("archivos\PropagacionErrores.txt", 'a') as archivo:
+            archivo.write("FechaGenerado: {}\n".format(datetime.now()))
             archivo.write("Valorx: {}\n".format(valorx))
             archivo.write("Valory: {}\n".format(valory))
             archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
 
     def almacenarDatosBolzano(valorInf, valorSup, funcion,raiz):
         with open("archivos\TeoremaBolzano.txt", 'a') as archivo:
+            archivo.write("FechaGenerado: {}\n".format(datetime.now()))
+            archivo.write("Funcion: {}\n".format(funcion))
+            archivo.write("ValorInferior: {}\n".format(valorInf))
+            archivo.write("ValorSuperior: {}\n".format(valorSup))
+            archivo.write("Raiz: {}\n".format(raiz))
+            archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
+
+    def almacenarDatosBiseccion(valorInf, valorSup, funcion,raiz):
+        with open("archivos\MetodoBiseccion.txt", 'a') as archivo:
             archivo.write("Funcion: {}\n".format(funcion))
             archivo.write("ValorInferior: {}\n".format(valorInf))
             archivo.write("ValorSuperior: {}\n".format(valorSup))
