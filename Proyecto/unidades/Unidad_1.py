@@ -10,14 +10,14 @@ class Unidad1:
     #TEMA 1 - CALCULO DE ERRORES
     #Calculo de error absoluto
     def calcularErrorAbsoluto(valorReal, valorAproximado):
-      errorAbsoluto=abs(valorReal-valorAproximado)
-      ManejoArchivos.almacenarDatosErrores(1,valorReal,valorAproximado,errorAbsoluto,"archivos\Errores.txt")
-      return errorAbsoluto
+        errorAbsoluto=abs(valorReal-valorAproximado)
+        ManejoArchivos.almacenarDatosErrores(1,valorReal,valorAproximado,errorAbsoluto)
+        return errorAbsoluto
 
     #Calculo de error relativo
     def calcularErrorRelativo(valorReal, valorAproximado):
       errorRelativo=abs(valorReal-valorAproximado)/abs(valorReal)
-      ManejoArchivos.almacenarDatosErrores(2,valorReal,valorAproximado,errorRelativo,"archivos\Errores.txt")
+      ManejoArchivos.almacenarDatosErrores(2,valorReal,valorAproximado,errorRelativo)
       return errorRelativo
 
     #TEMA 2 - SISTEMAS DE NUMERACION

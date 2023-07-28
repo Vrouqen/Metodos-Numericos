@@ -1,8 +1,8 @@
 from datetime import datetime
 class ManejoArchivos:
-    def almacenarDatosErrores(tipoError,valorReal, valorAproximado, resultado, nombre_archivo):
+    def almacenarDatosErrores(tipoError,valorReal, valorAproximado, resultado):
         # Esta función almacena los datos en un archivo
-        with open(nombre_archivo, 'a') as archivo:
+        with open("archivos\Errores.txt", 'a') as archivo:
             archivo.write("FechaGenerado: {}\n".format(datetime.now()))
             archivo.write("ValorReal: {}\n".format(valorReal))
             archivo.write("ValorAproximado: {}\n".format(valorAproximado))

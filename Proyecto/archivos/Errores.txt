@@ -1,0 +1,10 @@
+FechaGenerado: 2023-07-27 19:00:37.685639
+ValorReal: 213.0
+ValorAproximado: 241.0
+ErrorAbsoluto: 28.0
+
+FechaGenerado: 2023-07-27 19:00:38.686666
+ValorReal: 213.0
+ValorAproximado: 241.0
+ErrorRelativo: 0.13145539906103287
+
