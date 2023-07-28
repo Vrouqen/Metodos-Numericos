@@ -28,3 +28,13 @@ class ManejoArchivos:
                 archivo.write("NumeroOctal: {}\n".format(numOriginal))
                 archivo.write("NumeroDecimal: {}\n".format(numTransformado))
             archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
+
+    def almacenarDatosIEE(tipoTransformacion, numOriginal, numTransformado):
+        with open("archivos\IEEE.txt", 'a') as archivo:
+            if tipoTransformacion==1:
+                archivo.write("NumeroDecimal: {}\n".format(numOriginal))
+                archivo.write("Numero32bits: {}\n".format(numTransformado))
+            elif tipoTransformacion==2:
+                archivo.write("NumeroDecimal: {}\n".format(numOriginal))
+                archivo.write("Numero64bits: {}\n".format(numTransformado))
+            archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios

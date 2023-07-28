@@ -76,12 +76,14 @@ class Unidad1:
     def convertirIEE754_32bits(num):
       num1 = struct.pack('!f', num)
       numBinario = ''.join(format(byte, '08b') for byte in num1)
+      ManejoArchivos.almacenarDatosIEE(1, num, numBinario)
       return numBinario
 
     #Conversion de numero a IEE 754 64 bits
     def convertirIEE754_64bits(num):
       num1 = struct.pack('!d', num)
       numBinario = ''.join(format(byte, '08b') for byte in num1)
+      ManejoArchivos.almacenarDatosIEE(2, num, numBinario)
       return numBinario
 
     #TEMA 4 - PROPAGACION DE ERRORES
