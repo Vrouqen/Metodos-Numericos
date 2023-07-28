@@ -44,3 +44,11 @@ class ManejoArchivos:
             archivo.write("Valorx: {}\n".format(valorx))
             archivo.write("Valory: {}\n".format(valory))
             archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
+
+    def almacenarDatosBolzano(valorInf, valorSup, funcion,raiz):
+        with open("archivos\TeoremaBolzano.txt", 'a') as archivo:
+            archivo.write("Funcion: {}\n".format(funcion))
+            archivo.write("ValorInferior: {}\n".format(valorInf))
+            archivo.write("ValorSuperior: {}\n".format(valorSup))
+            archivo.write("Raiz: {}\n".format(raiz))
+            archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
