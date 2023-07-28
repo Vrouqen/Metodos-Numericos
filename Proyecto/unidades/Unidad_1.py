@@ -141,9 +141,10 @@ class Unidad1:
         valorYInf=Unidad1.transformarAFuncion(valorInf,funcion)
         valorYSup=Unidad1.transformarAFuncion(valorSup,funcion)
         if valorYInf * valorYSup < 0:
-            return True
+            raiz=True
         else:
-            return False
+            raiz=False
+        return raiz
 
     #TEMA 6 - METODO DE BISECCION
     def metodoBiseccion(valorInf, valorSup, precision, funcion):
