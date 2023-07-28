@@ -12,4 +12,19 @@ class ManejoArchivos:
                 archivo.write("ErrorRelativo: {}\n".format(resultado))
             archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
 
-
+    def almacenarDatosSistemasNumeracion(tipoTransformacion,numOriginal,numTransformado):
+        # Esta función almacena los datos en un archivo
+        with open("archivos\SistemasNumeracion.txt", 'a') as archivo:
+            if tipoTransformacion==1:
+                archivo.write("NumeroBinario: {}\n".format(numOriginal))
+                archivo.write("NumeroDecimal: {}\n".format(numTransformado))
+            elif tipoTransformacion==2:
+                archivo.write("NumeroDecimal: {}\n".format(numOriginal))
+                archivo.write("NumeroBinario: {}\n".format(numTransformado))
+            elif tipoTransformacion==3:
+                archivo.write("NumeroHexadecimal: {}\n".format(numOriginal))
+                archivo.write("NumeroDecimal: {}\n".format(numTransformado))
+            elif tipoTransformacion==4:
+                archivo.write("NumeroOctal: {}\n".format(numOriginal))
+                archivo.write("NumeroDecimal: {}\n".format(numTransformado))
+            archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios

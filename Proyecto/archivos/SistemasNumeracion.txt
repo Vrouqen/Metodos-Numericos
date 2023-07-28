@@ -1,0 +1,6 @@
+NumeroBinario: 123
+NumeroDecimal: 1111011
+
+NumeroBinario: 1001
+NumeroDecimal: 9
+

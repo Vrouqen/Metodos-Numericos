@@ -23,15 +23,18 @@ class Unidad1:
     #TEMA 2 - SISTEMAS DE NUMERACION
     #Transformar número de binario a decimal
     def convertirBinarioToDecimal(numBinario):
+        numBinarioAlmacenar=numBinario
         numero_decimal=0
         cantDigitos=len(numBinario)
         for i in range(cantDigitos):
             digito=int(numBinario[cantDigitos - i - 1])
             numero_decimal+=digito*(2 ** i)
+        ManejoArchivos.almacenarDatosSistemasNumeracion(1,numBinarioAlmacenar,numero_decimal)
         return numero_decimal
 
     #Transformar número de decimal a binario
     def convertirDecimalToBinario(numDecimal):
+        numDecimalAlmacenar=numDecimal
         numBinario=""
         if numDecimal==0:
             numBinario="0"
@@ -39,10 +42,12 @@ class Unidad1:
             bit=numDecimal%2
             numBinario=str(bit)+numBinario
             numDecimal//= 2
+        ManejoArchivos.almacenarDatosSistemasNumeracion(2, numDecimalAlmacenar, numBinario)
         return numBinario
 
     #Transformar número hexadecimal a decimal
     def convertirHexadecimalToDecimal(numHexadecimal):
+        numHexadecimalAlmacenar=numHexadecimal
         digitos="0123456789ABCDEF"
         numDecimal=0
         potencia=len(numHexadecimal)-1
@@ -50,10 +55,12 @@ class Unidad1:
             valor=digitos.index(digito)
             numDecimal+=valor*(16 ** potencia)
             potencia-=1
+        ManejoArchivos.almacenarDatosSistemasNumeracion(3, numHexadecimalAlmacenar, numDecimal)
         return numDecimal
 
     #Transformar de número octal a decimal
     def convertirOctalToDecimal(numOctal):
+        numOctalAlmacenar=numOctal
         numDecimal=0
         potencia=0
         while numOctal!=0:
@@ -61,6 +68,7 @@ class Unidad1:
             numDecimal+=digito*(8 ** potencia)
             numOctal//=10
             potencia+=1
+        ManejoArchivos.almacenarDatosSistemasNumeracion(4, numOctalAlmacenar, numDecimal)
         return numDecimal
 
     #TEMA 3 - PUNTO FLOTANTE
