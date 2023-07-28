@@ -38,3 +38,9 @@ class ManejoArchivos:
                 archivo.write("NumeroDecimal: {}\n".format(numOriginal))
                 archivo.write("Numero64bits: {}\n".format(numTransformado))
             archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
+
+    def almacenarDatosPropagacion(valorx,valory):
+        with open("archivos\PropagacionErrores.txt", 'a') as archivo:
+            archivo.write("Valorx: {}\n".format(valorx))
+            archivo.write("Valory: {}\n".format(valory))
+            archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios

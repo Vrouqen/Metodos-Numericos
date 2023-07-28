@@ -93,6 +93,7 @@ class Unidad1:
             numerador = math.exp(x)
             denominador = math.exp(x) - 1
             resultado = numerador / denominador
+            ManejoArchivos.almacenarDatosPropagacion(x,resultado)
             return resultado
         except Exception as e:
             print("Error en el cálculo: ", str(e))
