@@ -13,3 +13,153 @@ ValorReal: 3.0
 ValorAproximado: 3.4
 ErrorAbsoluto: 0.3999999999999999
 
+FechaGenerado: 2023-08-01 14:53:34.703744
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorAbsoluto: 39.0
+
+FechaGenerado: 2023-08-01 14:53:36.459742
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorRelativo: 2.6
+
+FechaGenerado: 2023-08-01 14:53:37.692740
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorAbsoluto: 39.0
+
+FechaGenerado: 2023-08-01 14:53:38.004743
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorRelativo: 2.6
+
+FechaGenerado: 2023-08-01 14:53:38.329756
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorAbsoluto: 39.0
+
+FechaGenerado: 2023-08-01 14:53:38.613745
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorRelativo: 2.6
+
+FechaGenerado: 2023-08-01 14:53:38.895740
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorAbsoluto: 39.0
+
+FechaGenerado: 2023-08-01 14:53:39.182741
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorRelativo: 2.6
+
+FechaGenerado: 2023-08-01 14:53:40.861755
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorAbsoluto: 39.0
+
+FechaGenerado: 2023-08-01 14:53:41.227740
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorRelativo: 2.6
+
+FechaGenerado: 2023-08-01 14:53:41.627746
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorAbsoluto: 39.0
+
+FechaGenerado: 2023-08-01 14:53:41.971740
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorRelativo: 2.6
+
+FechaGenerado: 2023-08-01 14:53:42.215740
+ValorReal: 15.0
+ValorAproximado: 54.0
+ErrorAbsoluto: 39.0
+
+FechaGenerado: 2023-08-01 16:33:30.073732
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorAbsoluto: 0.0
+
+FechaGenerado: 2023-08-01 16:33:30.737735
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorRelativo: 0.0
+
+FechaGenerado: 2023-08-01 16:33:31.200746
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorRelativo: 0.0
+
+FechaGenerado: 2023-08-01 16:33:32.507734
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorRelativo: 0.0
+
+FechaGenerado: 2023-08-01 16:33:32.824733
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorAbsoluto: 0.0
+
+FechaGenerado: 2023-08-01 16:33:33.139732
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorRelativo: 0.0
+
+FechaGenerado: 2023-08-01 16:48:52.822362
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorAbsoluto: 0.0
+
+FechaGenerado: 2023-08-01 16:48:54.244359
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorRelativo: 0.0
+
+FechaGenerado: 2023-08-01 16:48:56.858360
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorAbsoluto: 0.0
+
+FechaGenerado: 2023-08-01 16:48:57.265358
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorRelativo: 0.0
+
+FechaGenerado: 2023-08-01 16:48:57.707363
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorAbsoluto: 0.0
+
+FechaGenerado: 2023-08-01 16:48:58.092374
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorRelativo: 0.0
+
+FechaGenerado: 2023-08-01 16:48:58.450358
+ValorReal: 15.0
+ValorAproximado: 15.0
+ErrorAbsoluto: 0.0
+
+FechaGenerado: 2023-08-01 16:52:52.957205
+ValorReal: 154.0
+ValorAproximado: 45.0
+ErrorAbsoluto: 109.0
+
+FechaGenerado: 2023-08-01 16:52:53.965205
+ValorReal: 154.0
+ValorAproximado: 45.0
+ErrorRelativo: 0.7077922077922078
+
+FechaGenerado: 2023-08-01 17:23:29.910244
+ValorReal: 15.0
+ValorAproximado: 454.0
+ErrorAbsoluto: 439.0
+
+FechaGenerado: 2023-08-01 17:23:30.610238
+ValorReal: 15.0
+ValorAproximado: 454.0
+ErrorRelativo: 29.266666666666666
+
