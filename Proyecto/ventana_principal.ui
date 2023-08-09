@@ -450,7 +450,7 @@ font: 75 12pt &quot;Arial Black&quot;;
              </size>
             </property>
             <property name="text">
-             <string>Errores</string>
+             <string>IEEE 32 y 64 </string>
             </property>
             <property name="icon">
              <iconset>
@@ -479,7 +479,7 @@ font: 75 12pt &quot;Arial Black&quot;;
              </size>
             </property>
             <property name="text">
-             <string>Errores</string>
+             <string>Bolzano</string>
             </property>
             <property name="icon">
              <iconset>
@@ -508,11 +508,10 @@ font: 75 12pt &quot;Arial Black&quot;;
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-</string>
+             <string notr="true"/>
             </property>
             <property name="text">
-             <string>Errores</string>
+             <string>Bisección</string>
             </property>
             <property name="icon">
              <iconset>
@@ -582,7 +581,7 @@ font: 75 12pt &quot;Arial Black&quot;;
              <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="page">
              <property name="styleSheet">
@@ -693,7 +692,7 @@ font: 75 12pt &quot;Arial Black&quot;;
 </string>
                       </property>
                       <property name="text">
-                       <string>CALCULO DE ERRORES</string>
+                       <string>Calculo de Errores</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignCenter</set>
@@ -1952,32 +1951,6 @@ border-bottom-right-radius: 20px;
                         <string>Mostrar gráfico</string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="labelFuncion_3">
-                       <property name="geometry">
-                        <rect>
-                         <x>100</x>
-                         <y>270</y>
-                         <width>101</width>
-                         <height>20</height>
-                        </rect>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <family>Arial Black</family>
-                         <pointsize>12</pointsize>
-                         <weight>9</weight>
-                         <italic>false</italic>
-                         <bold>false</bold>
-                        </font>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
-color:rgb(0, 0, 0)</string>
-                       </property>
-                       <property name="text">
-                        <string>Resultado</string>
-                       </property>
-                      </widget>
                       <widget class="QLabel" name="labelResultado_2">
                        <property name="geometry">
                         <rect>
@@ -2006,6 +1979,36 @@ border-bottom-right-radius: 20px;
                         <string/>
                        </property>
                       </widget>
+                      <widget class="QLabel" name="labelTema_11">
+                       <property name="geometry">
+                        <rect>
+                         <x>100</x>
+                         <y>260</y>
+                         <width>101</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Resultado</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
                      </widget>
                     </item>
                     <item>
@@ -2032,13 +2035,356 @@ border-bottom-right-radius: 20px;
             <widget class="QWidget" name="page_tres">
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
-               <widget class="QPushButton" name="pushButton_4">
+               <widget class="QFrame" name="frame_19">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(170, 255, 127);</string>
+                 <string notr="true">QPushButton{
+background-color:rgb(53, 53, 79);
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+font: 75 12pt &quot;Arial Black&quot;;
+}
+QPushButton:hover{
+background-color: rgb(20, 200, 220);
+color: white;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+font: 75 12pt &quot;Arial Black&quot;;
+}</string>
                 </property>
-                <property name="text">
-                 <string>4</string>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_20">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_12">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <spacer name="horizontalSpacer_20">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>75</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="labelTema_9">
+                      <property name="font">
+                       <font>
+                        <family>Times New Roman</family>
+                        <pointsize>24</pointsize>
+                        <weight>75</weight>
+                        <italic>true</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(20, 200, 220);</string>
+                      </property>
+                      <property name="text">
+                       <string>Sistemas de Numeración IEEE</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_21">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>74</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_21">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <spacer name="horizontalSpacer_22">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>34</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_22">
+                      <property name="minimumSize">
+                       <size>
+                        <width>500</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QLabel" name="labelFuncion_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>110</x>
+                         <y>50</y>
+                         <width>81</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Numero:</string>
+                       </property>
+                      </widget>
+                      <widget class="QTextEdit" name="textNumero_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>40</y>
+                         <width>211</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelNumTransformado_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>180</y>
+                         <width>481</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>16</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="boton32bits">
+                       <property name="geometry">
+                        <rect>
+                         <x>70</x>
+                         <y>260</y>
+                         <width>171</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>32 Bits</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="boton64bits">
+                       <property name="geometry">
+                        <rect>
+                         <x>280</x>
+                         <y>260</y>
+                         <width>171</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>64 Bits</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelTema_10">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>110</y>
+                         <width>131</width>
+                         <height>48</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Resultado</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_23">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>34</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
@@ -2046,13 +2392,466 @@ border-bottom-right-radius: 20px;
             <widget class="QWidget" name="page_cuatro">
              <layout class="QVBoxLayout" name="verticalLayout_9">
               <item>
-               <widget class="QPushButton" name="pushButton_5">
+               <widget class="QFrame" name="frame_23">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(85, 85, 0);</string>
+                 <string notr="true">QPushButton{
+background-color:rgb(53, 53, 79);
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+font: 75 12pt &quot;Arial Black&quot;;
+}
+QPushButton:hover{
+background-color: rgb(20, 200, 220);
+color: white;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+font: 75 12pt &quot;Arial Black&quot;;
+}</string>
                 </property>
-                <property name="text">
-                 <string>5</string>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_24">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <item>
+                     <spacer name="horizontalSpacer_24">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>136</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="labelTema_12">
+                      <property name="font">
+                       <font>
+                        <family>Times New Roman</family>
+                        <pointsize>24</pointsize>
+                        <weight>75</weight>
+                        <italic>true</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(20, 200, 220);</string>
+                      </property>
+                      <property name="text">
+                       <string>Teorema de Bolzano</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_25">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>136</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_25">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_15">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <spacer name="horizontalSpacer_26">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>34</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_26">
+                      <property name="minimumSize">
+                       <size>
+                        <width>500</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QLabel" name="labelFuncion_5">
+                       <property name="geometry">
+                        <rect>
+                         <x>110</x>
+                         <y>30</y>
+                         <width>81</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Función:</string>
+                       </property>
+                      </widget>
+                      <widget class="QTextEdit" name="textFuncion">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>20</y>
+                         <width>201</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelFuncion_6">
+                       <property name="geometry">
+                        <rect>
+                         <x>70</x>
+                         <y>90</y>
+                         <width>161</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Intervalo Inferior</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelFuncion_7">
+                       <property name="geometry">
+                        <rect>
+                         <x>70</x>
+                         <y>150</y>
+                         <width>161</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Intervalo Superior</string>
+                       </property>
+                      </widget>
+                      <widget class="QTextEdit" name="textValorInf">
+                       <property name="geometry">
+                        <rect>
+                         <x>240</x>
+                         <y>80</y>
+                         <width>171</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                      </widget>
+                      <widget class="QTextEdit" name="textValorSup">
+                       <property name="geometry">
+                        <rect>
+                         <x>240</x>
+                         <y>140</y>
+                         <width>171</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelFuncion_8">
+                       <property name="geometry">
+                        <rect>
+                         <x>40</x>
+                         <y>230</y>
+                         <width>101</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Resultado:</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelResultado_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>150</x>
+                         <y>220</y>
+                         <width>291</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonCalcular_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>40</x>
+                         <y>280</y>
+                         <width>121</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Calcular</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonGrafico_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>280</y>
+                         <width>121</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Gráfico</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonAyuda">
+                       <property name="geometry">
+                        <rect>
+                         <x>350</x>
+                         <y>280</y>
+                         <width>111</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Ayuda</string>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_27">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>34</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
@@ -2060,13 +2859,481 @@ border-bottom-right-radius: 20px;
             <widget class="QWidget" name="page_cinco">
              <layout class="QVBoxLayout" name="verticalLayout_4">
               <item>
-               <widget class="QPushButton" name="pushButton_11">
+               <widget class="QFrame" name="frame_27">
                 <property name="styleSheet">
-                 <string notr="true">background-color: rgb(85, 255, 127);</string>
+                 <string notr="true">QPushButton{
+background-color:rgb(53, 53, 79);
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+font: 75 12pt &quot;Arial Black&quot;;
+}
+QPushButton:hover{
+background-color: rgb(20, 200, 220);
+color: white;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+font: 75 12pt &quot;Arial Black&quot;;
+}</string>
                 </property>
-                <property name="text">
-                 <string>6</string>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
                 </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_28">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_16">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <spacer name="horizontalSpacer_28">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>149</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="labelTema_13">
+                      <property name="font">
+                       <font>
+                        <family>Times New Roman</family>
+                        <pointsize>24</pointsize>
+                        <weight>75</weight>
+                        <italic>true</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(20, 200, 220);</string>
+                      </property>
+                      <property name="text">
+                       <string>Método de Bisección</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_29">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>148</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_29">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_17">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <spacer name="horizontalSpacer_30">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>34</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_30">
+                      <property name="minimumSize">
+                       <size>
+                        <width>500</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QLabel" name="labelFuncion_9">
+                       <property name="geometry">
+                        <rect>
+                         <x>110</x>
+                         <y>30</y>
+                         <width>81</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Función:</string>
+                       </property>
+                      </widget>
+                      <widget class="QTextEdit" name="textFuncion_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>20</y>
+                         <width>201</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelFuncion_10">
+                       <property name="geometry">
+                        <rect>
+                         <x>70</x>
+                         <y>90</y>
+                         <width>161</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Intervalo Inferior</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelFuncion_11">
+                       <property name="geometry">
+                        <rect>
+                         <x>70</x>
+                         <y>150</y>
+                         <width>161</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Intervalo Superior</string>
+                       </property>
+                      </widget>
+                      <widget class="QTextEdit" name="textValorInf_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>240</x>
+                         <y>80</y>
+                         <width>171</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                      </widget>
+                      <widget class="QTextEdit" name="textEdit">
+                       <property name="geometry">
+                        <rect>
+                         <x>240</x>
+                         <y>140</y>
+                         <width>171</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelFuncion_12">
+                       <property name="geometry">
+                        <rect>
+                         <x>40</x>
+                         <y>230</y>
+                         <width>101</width>
+                         <height>20</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font: 75 12pt &quot;Arial Black&quot;;
+color: rgb(20, 200, 220);</string>
+                       </property>
+                       <property name="text">
+                        <string>Resultado:</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="labelResultado_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>150</x>
+                         <y>220</y>
+                         <width>291</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>16</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border: 2px solid rgb(53, 53, 79); 
+color: rgb(20, 200, 220);
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonCalcular_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>40</x>
+                         <y>280</y>
+                         <width>121</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Calcular</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonGrafico_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>280</y>
+                         <width>121</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Gráfico</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonAyuda_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>350</x>
+                         <y>280</y>
+                         <width>111</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Ayuda</string>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_31">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>34</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>

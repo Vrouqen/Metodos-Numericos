@@ -4,3 +4,21 @@ ValorInferior: -2.0
 ValorSuperior: 0.0
 Raiz: True
 
+FechaGenerado: 2023-08-09 17:45:30.164760
+Funcion: x**2-1
+ValorInferior: -2.0
+ValorSuperior: 4.0
+Raiz: False
+
+FechaGenerado: 2023-08-09 17:46:09.017758
+Funcion: x**2-1
+ValorInferior: 0.0
+ValorSuperior: 4.0
+Raiz: True
+
+FechaGenerado: 2023-08-09 17:46:49.494841
+Funcion: x**2-1
+ValorInferior: 0.0
+ValorSuperior: 4.0
+Raiz: True
+
