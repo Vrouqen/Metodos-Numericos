@@ -1,9 +1,9 @@
-```markdown
-# Calculadora Científica con Interfaz Gráfica
+
+# Calculadora Científica con Interfaz Gráfica ⌨️
 
 Esta es una calculadora científica con interfaz gráfica desarrollada en Python utilizando la biblioteca PyQt5. Proporciona varias funcionalidades matemáticas y herramientas para cálculos numéricos y conversiones de sistemas numéricos. La interfaz de usuario permite una interacción intuitiva y fácil de usar.
 
-## Características
+## Características 🛠️
 
 La calculadora científica ofrece las siguientes características:
 
@@ -33,16 +33,45 @@ La calculadora científica ofrece las siguientes características:
   - Cálculo de la raíz de una función en un intervalo dado.
   - Gráfica de la función para visualizar el intervalo.
 
-## Requisitos
+### Requisitos 📋
 
 Para ejecutar la calculadora científica, se requiere tener instalado Python (versión 3.6 o superior) y las siguientes bibliotecas de Python:
 
-- PyQt5
-- Matplotlib
+Puedes utilizar el administrador de paquetes `pip`. Abre tu terminal o línea de comandos y ejecuta los siguientes comandos, uno por uno, para instalar cada una de las librerías:
+
+1. **Matplotlib**:
+   ```bash
+   pip install matplotlib
+   ```
+
+2. **PyQt5**:
+   
+   ```bash
+   pip install PyQt5
+   ```
+
+3. **NumPy**:
+   
+   ```bash
+   pip install numpy
+   ```
+
+4. **reportlab**:
+
+   ```bash
+   pip install reportlab
+   ```
+
+5. **fpdf2** :
+
+   ```bash
+   pip install fpdf2
+   ```
+
 
 Se recomienda utilizar un entorno virtual de Python para evitar conflictos con otras bibliotecas o versiones de Python instaladas en el sistema.
 
-## Instrucciones de Uso
+### Instrucciones de Uso 🔧
 
 1. Clona o descarga el repositorio en tu máquina local.
 
@@ -66,7 +95,7 @@ Se recomienda utilizar un entorno virtual de Python para evitar conflictos con o
 
 7. Disfruta de la calculadora científica y explora sus diversas funcionalidades.
 
-## Contribuciones
+## Contribuciones 📦
 
 Las contribuciones son bienvenidas. Si deseas mejorar la calculadora científica, corregir errores o agregar nuevas funcionalidades, sigue los siguientes pasos:
 
@@ -84,7 +113,7 @@ Las contribuciones son bienvenidas. Si deseas mejorar la calculadora científica
 
 7. Espera comentarios o aprobación para fusionar los cambios.
 
-## Agradecimientos
+## Agradecimientos 🎁
 
 - Este proyecto utiliza la biblioteca PyQt5 para crear la interfaz gráfica.
 - Se han utilizado las funcionalidades matemáticas proporcionadas por el módulo Unidad1.
