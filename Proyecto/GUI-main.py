@@ -392,11 +392,55 @@ def borrarinter():
     main.textPuntos.setText("Valores de X : "+str(Examen.valoresX)+"\nValores de Y : "+str(Examen.valoresY))
 
 
-def transformarPDF():
+
+def transformarPDFIEE():
     inputFile="archivos\IEEE.txt"
-    outputFile="PDFs\Ava.pdf"
+    outputFile="PDFs\Registros IEEE.pdf"
     resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
     print(resultado)
+
+def transformarPDFErrores():
+    inputFile="archivos\Errores.txt"
+    outputFile="PDFs\Registros Errores.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
+
+def transformarPDFMetodoBiseccion():
+    inputFile="archivos\MetodoBiseccion.txt"
+    outputFile="PDFs\Registros Metodo Bisección.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
+
+def transformarPDFPropagacionErrores():
+    inputFile="archivos\PropagacionErrores.txt"
+    outputFile="PDFs\Registros Propagación de Errores.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
+
+def transformarPDFSeriesLagrange():
+    inputFile="archivos\SeriesLagrange.txt"
+    outputFile="PDFs\Registros Interpolación de Lagrange.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
+
+def transformarPDFSeriesTaylor():
+    inputFile="archivos\SeriesTaylor.txt"
+    outputFile="PDFs\Registros Series de Taylor.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
+
+def transformarPDFSistemasNumeracion():
+    inputFile="archivos\SistemasNumeracion.txt"
+    outputFile="PDFs\Registros Sistemas de Numeración.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
+
+def transformarPDFTeoremaBolzano():
+    inputFile="archivos\TeoremaBolzano.txt"
+    outputFile="PDFs\Registros Teorema de Bolzano.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
+
 
 
 #Asignación de funciones/utilidades
@@ -424,6 +468,17 @@ main.botonResolver.clicked.connect(resolvertay)
 main.botonAgregar.clicked.connect(agregarPunto)
 main.botonBorrar.clicked.connect(borrarinter)
 main.botonResolver_2.clicked.connect(resolverinter)
+
+main.botonPDFLagrange.clicked.connect(transformarPDFSeriesLagrange)
+main.botonPDFSistemasNumeros.clicked.connect(transformarPDFSistemasNumeracion)
+main.botonPDFErrores.clicked.connect(transformarPDFPropagacionErrores)
+main.botonPDFIEEE.clicked.connect(transformarPDFIEE)
+main.botonPDFBolzano.clicked.connect(transformarPDFTeoremaBolzano)
+main.botonPDFBiseccion.clicked.connect(transformarPDFMetodoBiseccion)
+main.botonPDFErroresCalc.clicked.connect(transformarPDFErrores)
+main.botonPDFTaylor.clicked.connect(transformarPDFSeriesTaylor)
+
+
 
 main.show()
 app.exec()

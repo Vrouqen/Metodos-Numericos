@@ -492,7 +492,7 @@ font: 75 12pt &quot;Arial Black&quot;;
              <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>6</number>
             </property>
             <widget class="QWidget" name="page">
              <property name="styleSheet">
@@ -689,7 +689,7 @@ font: 75 12pt &quot;Arial Black&quot;;
                       <widget class="QLabel" name="labelTema_2">
                        <property name="geometry">
                         <rect>
-                         <x>90</x>
+                         <x>40</x>
                          <y>20</y>
                          <width>171</width>
                          <height>30</height>
@@ -718,7 +718,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QLabel" name="labelTema_3">
                        <property name="geometry">
                         <rect>
-                         <x>70</x>
+                         <x>20</x>
                          <y>60</y>
                          <width>171</width>
                          <height>30</height>
@@ -747,7 +747,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QTextEdit" name="textReal">
                        <property name="geometry">
                         <rect>
-                         <x>250</x>
+                         <x>200</x>
                          <y>10</y>
                          <width>161</width>
                          <height>41</height>
@@ -775,7 +775,7 @@ border-bottom-right-radius: 20px;
                       <widget class="QTextEdit" name="textAprox">
                        <property name="geometry">
                         <rect>
-                         <x>250</x>
+                         <x>200</x>
                          <y>60</y>
                          <width>161</width>
                          <height>41</height>
@@ -802,6 +802,31 @@ border-bottom-right-radius: 20px;</string>
                        </property>
                        <property name="verticalScrollBarPolicy">
                         <enum>Qt::ScrollBarAlwaysOff</enum>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonPDFErroresCalc">
+                       <property name="geometry">
+                        <rect>
+                         <x>380</x>
+                         <y>10</y>
+                         <width>121</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
                        </property>
                       </widget>
                      </widget>
@@ -1270,7 +1295,7 @@ font: 75 12pt &quot;Arial Black&quot;;
                       <widget class="QLabel" name="labelTema_15">
                        <property name="geometry">
                         <rect>
-                         <x>90</x>
+                         <x>0</x>
                          <y>30</y>
                          <width>121</width>
                          <height>30</height>
@@ -1299,7 +1324,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QTextEdit" name="textFuncion_3">
                        <property name="geometry">
                         <rect>
-                         <x>220</x>
+                         <x>130</x>
                          <y>20</y>
                          <width>171</width>
                          <height>41</height>
@@ -1323,7 +1348,7 @@ border-bottom-right-radius: 20px;</string>
                       <widget class="QLabel" name="labelTema_16">
                        <property name="geometry">
                         <rect>
-                         <x>100</x>
+                         <x>10</x>
                          <y>80</y>
                          <width>101</width>
                          <height>30</height>
@@ -1352,7 +1377,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QLabel" name="labelTema_17">
                        <property name="geometry">
                         <rect>
-                         <x>100</x>
+                         <x>10</x>
                          <y>140</y>
                          <width>101</width>
                          <height>30</height>
@@ -1381,7 +1406,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QTextEdit" name="textValorX_2">
                        <property name="geometry">
                         <rect>
-                         <x>220</x>
+                         <x>130</x>
                          <y>80</y>
                          <width>171</width>
                          <height>41</height>
@@ -1408,7 +1433,7 @@ border-bottom-right-radius: 20px;</string>
                       <widget class="QTextEdit" name="textNDerivadas">
                        <property name="geometry">
                         <rect>
-                         <x>220</x>
+                         <x>130</x>
                          <y>140</y>
                          <width>171</width>
                          <height>41</height>
@@ -1485,6 +1510,31 @@ border-bottom-right-radius: 20px;
                        </property>
                        <property name="text">
                         <string>Resolver</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonPDFTaylor">
+                       <property name="geometry">
+                        <rect>
+                         <x>350</x>
+                         <y>20</y>
+                         <width>141</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
                        </property>
                       </widget>
                      </widget>
@@ -2010,8 +2060,8 @@ border-bottom-right-radius: 20px;</string>
                       <widget class="QPushButton" name="botonResolver_2">
                        <property name="geometry">
                         <rect>
-                         <x>460</x>
-                         <y>310</y>
+                         <x>470</x>
+                         <y>290</y>
                          <width>111</width>
                          <height>41</height>
                         </rect>
@@ -2059,6 +2109,34 @@ color: rgb(20, 200, 220);</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonPDFLagrange">
+                       <property name="geometry">
+                        <rect>
+                         <x>460</x>
+                         <y>50</y>
+                         <width>121</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::NoFocus</enum>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
                        </property>
                       </widget>
                      </widget>
@@ -2539,6 +2617,19 @@ border-bottom-right-radius: 20px;
                         <string/>
                        </property>
                       </widget>
+                      <widget class="QPushButton" name="botonPDFSistemasNumeros">
+                       <property name="geometry">
+                        <rect>
+                         <x>330</x>
+                         <y>10</y>
+                         <width>141</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
+                       </property>
+                      </widget>
                      </widget>
                     </item>
                     <item>
@@ -2928,6 +3019,31 @@ color: rgb(20, 200, 220);
                         <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
+                      <widget class="QPushButton" name="botonPDFErrores">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>10</y>
+                         <width>131</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
+                       </property>
+                      </widget>
                      </widget>
                     </item>
                     <item>
@@ -3130,7 +3246,7 @@ font: 75 12pt &quot;Arial Black&quot;;
                        <property name="geometry">
                         <rect>
                          <x>110</x>
-                         <y>50</y>
+                         <y>80</y>
                          <width>81</width>
                          <height>20</height>
                         </rect>
@@ -3156,7 +3272,7 @@ color: rgb(20, 200, 220);</string>
                        <property name="geometry">
                         <rect>
                          <x>200</x>
-                         <y>40</y>
+                         <y>70</y>
                          <width>201</width>
                          <height>41</height>
                         </rect>
@@ -3283,6 +3399,31 @@ color: rgb(20, 200, 220);
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonPDFIEEE">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>131</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
                        </property>
                       </widget>
                      </widget>
@@ -3474,7 +3615,7 @@ font: 75 12pt &quot;Arial Black&quot;;
                       <widget class="QLabel" name="labelFuncion_5">
                        <property name="geometry">
                         <rect>
-                         <x>110</x>
+                         <x>40</x>
                          <y>30</y>
                          <width>81</width>
                          <height>20</height>
@@ -3500,7 +3641,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QTextEdit" name="textFuncion">
                        <property name="geometry">
                         <rect>
-                         <x>200</x>
+                         <x>130</x>
                          <y>20</y>
                          <width>201</width>
                          <height>41</height>
@@ -3527,7 +3668,7 @@ border-bottom-right-radius: 20px;</string>
                       <widget class="QLabel" name="labelFuncion_6">
                        <property name="geometry">
                         <rect>
-                         <x>70</x>
+                         <x>30</x>
                          <y>90</y>
                          <width>161</width>
                          <height>20</height>
@@ -3553,7 +3694,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QLabel" name="labelFuncion_7">
                        <property name="geometry">
                         <rect>
-                         <x>70</x>
+                         <x>30</x>
                          <y>150</y>
                          <width>161</width>
                          <height>20</height>
@@ -3579,7 +3720,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QTextEdit" name="textValorInf">
                        <property name="geometry">
                         <rect>
-                         <x>240</x>
+                         <x>200</x>
                          <y>80</y>
                          <width>171</width>
                          <height>41</height>
@@ -3609,7 +3750,7 @@ border-bottom-right-radius: 20px;</string>
                       <widget class="QTextEdit" name="textValorSup">
                        <property name="geometry">
                         <rect>
-                         <x>240</x>
+                         <x>200</x>
                          <y>140</y>
                          <width>171</width>
                          <height>41</height>
@@ -3756,6 +3897,31 @@ border-bottom-right-radius: 20px;</string>
                        </property>
                        <property name="text">
                         <string>Ayuda</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonPDFBolzano">
+                       <property name="geometry">
+                        <rect>
+                         <x>380</x>
+                         <y>10</y>
+                         <width>121</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
                        </property>
                       </widget>
                      </widget>
@@ -3962,7 +4128,7 @@ font: 75 12pt &quot;Arial Black&quot;;
                       <widget class="QLabel" name="labelFuncion_9">
                        <property name="geometry">
                         <rect>
-                         <x>110</x>
+                         <x>60</x>
                          <y>30</y>
                          <width>81</width>
                          <height>20</height>
@@ -3988,7 +4154,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QTextEdit" name="textFuncion_2">
                        <property name="geometry">
                         <rect>
-                         <x>200</x>
+                         <x>150</x>
                          <y>20</y>
                          <width>201</width>
                          <height>41</height>
@@ -4015,7 +4181,7 @@ border-bottom-right-radius: 20px;</string>
                       <widget class="QLabel" name="labelFuncion_10">
                        <property name="geometry">
                         <rect>
-                         <x>70</x>
+                         <x>20</x>
                          <y>90</y>
                          <width>161</width>
                          <height>20</height>
@@ -4041,7 +4207,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QLabel" name="labelFuncion_11">
                        <property name="geometry">
                         <rect>
-                         <x>70</x>
+                         <x>20</x>
                          <y>150</y>
                          <width>161</width>
                          <height>20</height>
@@ -4067,7 +4233,7 @@ color: rgb(20, 200, 220);</string>
                       <widget class="QTextEdit" name="textValorInf_2">
                        <property name="geometry">
                         <rect>
-                         <x>240</x>
+                         <x>190</x>
                          <y>80</y>
                          <width>171</width>
                          <height>41</height>
@@ -4097,7 +4263,7 @@ border-bottom-right-radius: 20px;</string>
                       <widget class="QTextEdit" name="textEdit">
                        <property name="geometry">
                         <rect>
-                         <x>240</x>
+                         <x>190</x>
                          <y>140</y>
                          <width>171</width>
                          <height>41</height>
@@ -4244,6 +4410,31 @@ border-bottom-right-radius: 20px;</string>
                        </property>
                        <property name="text">
                         <string>Ayuda</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="botonPDFBiseccion">
+                       <property name="geometry">
+                        <rect>
+                         <x>390</x>
+                         <y>10</y>
+                         <width>111</width>
+                         <height>41</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Generar PDF</string>
                        </property>
                       </widget>
                      </widget>
