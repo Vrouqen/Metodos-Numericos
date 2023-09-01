@@ -10,10 +10,20 @@ from unidades.Examen import Examen
 import matplotlib.pyplot as plt #Gráficos
 #Iniciar la aplicación
 app=QtWidgets.QApplication([])
-main=uic.loadUi("ventana_principal.ui")
+main=uic.loadUi("interfaz\Ventana_principal.ui")
 calcErrores=uic.loadUi("interfaz\CalculoErrores.ui")
 def cerrar():
     main.close()
+
+#Focus
+main.textValorX_3.setFocus()
+main.textNumero.setFocus()
+main.textValorX.setFocus()
+main.textNumero_2.setFocus()
+main.textFuncion.setFocus()
+main.textFuncion_2.setFocus()
+main.textReal.setFocus()
+main.textFuncion_3.setFocus()
 
 
 main.bt_uno.clicked.connect(lambda : main.stackedWidget.setCurrentWidget(main.page))
@@ -332,6 +342,48 @@ def agregarPunto():
         main.textValorX_3.setText("")
         main.textValorY.setText("")
 
+def convertirSistemasDeNumeros():
+    numeroString=main.textNumero.toPlainText()
+    if main.radioButton.isChecked():#Binario a decimal
+        valido=False
+        for i in numeroString:  # Validar correcto ingreso de binarios
+            if i != '0' and i != '1':  # Mensaje de error
+                valido = False
+                break
+            else:
+                valido = True
+        if valido==False:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Error")
+            msg.setText("Unicamente es válido el ingreso de 0 y 1")
+            msg.exec_()
+            main.textNumero.setText("")
+        else:
+            decimal = Unidad1.convertirBinarioToDecimal(numeroString)
+            main.labelNumTransformado.setText(str(decimal))
+
+    elif main.radioButton_2.isChecked():#Decimal a binario
+        if validadorEnteros(numeroString):
+            decimal = int(numeroString)
+            binario = Unidad1.convertirDecimalToBinario(decimal)  # Solo transforma números enteros
+            main.labelNumTransformado.setText(str(binario))
+        else:
+            main.textNumero.setText("")
+    elif main.radioButton_3.isChecked():#Hexadecimal a decimal
+        if validadorEnteros(numeroString):
+            hexadecimal = int(numeroString)
+            decimal = Unidad1.convertirHexadecimalToDecimal(hexadecimal)
+            main.labelNumTransformado.setText(str(decimal))
+        else:
+            main.textNumero.setText("")
+    elif main.radioButton_4.isChecked():#Octal a decimal
+        if validadorEnteros(numeroString):
+            octal = int(numeroString)
+            decimal = Unidad1.convertirOctalToDecimal(octal)
+            main.labelNumTransformado.setText(str(decimal))
+        else:
+            main.textNumero.setText("")
 
 def borrarinter():
     Examen.valoresX=[]
@@ -356,6 +408,8 @@ main.botonAyuda.clicked.connect(ayuda)#Boton de ayuda para ingresar la función
 main.botonCalcular_3.clicked.connect(calcularMétodoBisección)#Calcula el método de Bisección
 main.botonGrafico_3.clicked.connect(mostrarGraficaFuncionBiseccion)#Grafica del método de Bisección
 main.botonAyuda_2.clicked.connect(ayuda)#Boton de ayuda para ingresar la función
+
+main.pushButton.clicked.connect(convertirSistemasDeNumeros)
 
 main.botonResolver.clicked.connect(resolvertay)
 

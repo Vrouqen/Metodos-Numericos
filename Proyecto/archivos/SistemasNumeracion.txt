@@ -6,3 +6,7 @@ FechaGenerado: 2023-07-27 21:44:42.923924
 NumeroDecimal: 2314
 NumeroBinario: 100100001010
 
+FechaGenerado: 2023-09-01 06:56:18.911144
+NumeroBinario: 101
+NumeroDecimal: 5
+
