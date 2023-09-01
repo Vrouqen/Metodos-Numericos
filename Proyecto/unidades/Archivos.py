@@ -64,3 +64,17 @@ class ManejoArchivos:
             archivo.write("ValorSuperior: {}\n".format(valorSup))
             archivo.write("Raiz: {}\n".format(raiz))
             archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
+
+    def almacenarDatosTaylor(funcion, valorX, nDerivadas):
+        with open("archivos\SeriesTaylor.txt", 'a') as archivo:
+            archivo.write("Funcion: {}\n".format(funcion))
+            archivo.write("ValorX: {}\n".format(valorX))
+            archivo.write("nDerivadas: {}\n".format(nDerivadas))
+            archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
+
+    def almacenarDatosLagrange(valoresX, valoresY,valorX):
+        with open("archivos\SeriesLagrange.txt", 'a') as archivo:
+            archivo.write("ValoresX: {}\n".format(valoresX))
+            archivo.write("ValoresY: {}\n".format(valoresY))
+            archivo.write("ValorX: {}\n".format(valorX))
+            archivo.write("\n")  # Agregar una línea en blanco para separar los datos de distintos usuarios
