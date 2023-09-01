@@ -283,6 +283,31 @@ background-color: rgb(37,160,166);</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="botonBorrar">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>290</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255,255,255);
+background-color: rgb(37,160,166);</string>
+    </property>
+    <property name="text">
+     <string>Borrar puntos</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
