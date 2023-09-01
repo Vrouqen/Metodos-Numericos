@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
 from Proyecto.unidades.Unidad_1 import Unidad1
+from Proyecto.unidades.Unidad_2 import Unidad2
+from unidades.Examen import Examen
 import matplotlib.pyplot as plt #Gráficos
 #Iniciar la aplicación
 app=QtWidgets.QApplication([])
@@ -20,7 +22,8 @@ main.bt_tres.clicked.connect(lambda : main.stackedWidget.setCurrentWidget(main.p
 main.bt_cuatro.clicked.connect(lambda : main.stackedWidget.setCurrentWidget(main.page_tres))
 main.bt_cinco.clicked.connect(lambda : main.stackedWidget.setCurrentWidget(main.page_cuatro))
 main.bt_seis.clicked.connect(lambda : main.stackedWidget.setCurrentWidget(main.page_cinco))
-
+main.bt_siete.clicked.connect(lambda : main.stackedWidget.setCurrentWidget(main.page_taylor))
+main.bt_ocho.clicked.connect(lambda : main.stackedWidget.setCurrentWidget(main.page_lagrange))
 #Validaciones
 def validadorEnteros(decimalString):
     try:
@@ -269,6 +272,72 @@ def ayuda():
     msg.exec_()
     main.textValorInf.setText("")
     main.textEdit.setText("")
+def resolvertay():
+    try:
+        funcionStr = main.textFuncion_3.toPlainText()
+        valorX = float(main.textValorX_2.toPlainText())
+        nDerivadas = int(main.textNDerivadas.toPlainText())
+        resultado = Unidad2.seriesDeTaylor(funcionStr, valorX, nDerivadas)
+        print(resultado)
+        main.labelResultado_5.setText("El resultado es : " + str(resultado))
+        main.textValorX_2.setText("")
+
+    except:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Algún campo está mal digitado")
+        msg.exec_()
+
+def resolverinter():
+    if len(Examen.valoresX)!=0 and len(Examen.valoresY)!=0:
+        try:
+            valorX=float(main.textValorX2.toPlainText())
+            valoresX=Examen.valoresX
+            valoresY=Examen.valoresY
+            funcionInterpolada = Examen.interpolacionPolinomicaLagrange(valoresX, valoresY)
+            valorInterpolado = valorX
+            resultado = funcionInterpolada(valorInterpolado)
+            main.labelResultado_6.setText("El valor interpolado en x = "+str(valorInterpolado)+" es "+str(resultado))
+            main.textValorX2.setText("")
+        except:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Error")
+            msg.setText("Digite correctamente el valor de x")
+            msg.exec_()
+            main.textValorX2.setText("")
+    else:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("No existen puntos agregados")
+        msg.exec_()
+
+def agregarPunto():
+    try:
+        x=float(main.textValorX_3.toPlainText())
+        y=float(main.textValorY.toPlainText())
+        Examen.valoresX.append(x)
+        Examen.valoresY.append(y)
+        main.textPuntos.setText("Valores de X : " + str(Examen.valoresX) + "\nValores de Y : " + str(Examen.valoresY))
+        main.textValorX_3.setText("")
+        main.textValorY.setText("")
+    except ValueError:
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setWindowTitle("Error")
+        msg.setText("Ingrese correctamente el valor de x o y")
+        msg.exec_()
+        main.textValorX_3.setText("")
+        main.textValorY.setText("")
+
+
+def borrarinter():
+    Examen.valoresX=[]
+    Examen.valoresY=[]
+    main.textPuntos.setText("Valores de X : "+str(Examen.valoresX)+"\nValores de Y : "+str(Examen.valoresY))
+
 
 #Asignación de funciones/utilidades
 main.botonAbs.clicked.connect(calcularErrorAbs) #Calcular Error Absoluto
@@ -287,6 +356,12 @@ main.botonAyuda.clicked.connect(ayuda)#Boton de ayuda para ingresar la función
 main.botonCalcular_3.clicked.connect(calcularMétodoBisección)#Calcula el método de Bisección
 main.botonGrafico_3.clicked.connect(mostrarGraficaFuncionBiseccion)#Grafica del método de Bisección
 main.botonAyuda_2.clicked.connect(ayuda)#Boton de ayuda para ingresar la función
+
+main.botonResolver.clicked.connect(resolvertay)
+
+main.botonAgregar.clicked.connect(agregarPunto)
+main.botonBorrar.clicked.connect(borrarinter)
+main.botonResolver_2.clicked.connect(resolverinter)
 
 main.show()
 app.exec()

@@ -13,7 +13,7 @@ from unidades.Examen import Examen
 app=QtWidgets.QApplication([])
 interpolacion=uic.loadUi("interfaz\InterpolacionLagrange.ui")
 
-def resolver():
+def resolverinter():
     if len(Examen.valoresX)!=0 and len(Examen.valoresY)!=0:
         try:
             valorX=float(interpolacion.textValorX2.toPlainText())
@@ -57,15 +57,15 @@ def agregarPunto():
         interpolacion.textValorY.setText("")
 
 
-def borrar():
+def borrarinter():
     Examen.valoresX=[]
     Examen.valoresY=[]
     interpolacion.textPuntos.setText("Valores de X : "+str(Examen.valoresX)+"\nValores de Y : "+str(Examen.valoresY))
 
 
 interpolacion.botonAgregar.clicked.connect(agregarPunto)
-interpolacion.botonBorrar.clicked.connect(borrar)
-interpolacion.botonResolver.clicked.connect(resolver)
+interpolacion.botonBorrar.clicked.connect(borrarinter)
+interpolacion.botonResolver.clicked.connect(resolverinter)
 
 interpolacion.show()
 app.exec()
