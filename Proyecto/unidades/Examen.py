@@ -7,6 +7,8 @@ class Examen:
     #Tema 2 - Base dual
 
     #Tema 3 - Interpolación polinómica lagrange
+    valoresX=[]
+    valoresY=[]
     def interpolacionPolinomicaLagrange(valoresX, valoresY):
         def interpolate(x):
             n = len(valoresX)
