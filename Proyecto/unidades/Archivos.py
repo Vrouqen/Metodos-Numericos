@@ -59,6 +59,7 @@ class ManejoArchivos:
 
     def almacenarDatosBiseccion(valorInf, valorSup, funcion,raiz):
         with open("archivos\MetodoBiseccion.txt", 'a') as archivo:
+            archivo.write("FechaGenerado: {}\n".format(datetime.now()))
             archivo.write("Funcion: {}\n".format(funcion))
             archivo.write("ValorInferior: {}\n".format(valorInf))
             archivo.write("ValorSuperior: {}\n".format(valorSup))
@@ -67,6 +68,7 @@ class ManejoArchivos:
 
     def almacenarDatosTaylor(funcion, valorX, nDerivadas):
         with open("archivos\SeriesTaylor.txt", 'a') as archivo:
+            archivo.write("FechaGenerado: {}\n".format(datetime.now()))
             archivo.write("Funcion: {}\n".format(funcion))
             archivo.write("ValorX: {}\n".format(valorX))
             archivo.write("nDerivadas: {}\n".format(nDerivadas))
@@ -74,6 +76,7 @@ class ManejoArchivos:
 
     def almacenarDatosLagrange(valoresX, valoresY,valorX):
         with open("archivos\SeriesLagrange.txt", 'a') as archivo:
+            archivo.write("FechaGenerado: {}\n".format(datetime.now()))
             archivo.write("ValoresX: {}\n".format(valoresX))
             archivo.write("ValoresY: {}\n".format(valoresY))
             archivo.write("ValorX: {}\n".format(valorX))

@@ -163,3 +163,13 @@ ValorReal: 15.0
 ValorAproximado: 454.0
 ErrorRelativo: 29.266666666666666
 
+FechaGenerado: 2023-09-01 07:22:07.116635
+ValorReal: 23.0
+ValorAproximado: 14.0
+ErrorAbsoluto: 9.0
+
+FechaGenerado: 2023-09-01 07:22:07.589783
+ValorReal: 23.0
+ValorAproximado: 14.0
+ErrorRelativo: 0.391304347826087
+

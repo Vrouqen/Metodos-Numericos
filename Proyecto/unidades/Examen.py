@@ -14,8 +14,8 @@ class Examen:
                     if i != j:
                         termino *= (x - valoresX[j]) / (valoresX[i] - valoresX[j])
                 valorInterpolado += termino
+            ManejoArchivos.almacenarDatosLagrange(valoresX,valoresY,x)
             return valorInterpolado
-        ManejoArchivos.almacenarDatosLagrange(valoresX,valoresY,x)
         return interpolate
 
 
