@@ -1,4 +1,5 @@
 
+from Proyecto.unidades.Archivos import ManejoArchivos
 class Unidad2:
     #TEMA 1 - Series de Taylor
 
@@ -13,6 +14,7 @@ class Unidad2:
         for n in range(orden + 1):
             termino = Unidad2.transformarAFuncion(punto,funcionStr) * (punto - 0) ** n / Unidad2.factorial(n)
             resultado += termino
+        ManejoArchivos.almacenarDatosTaylor(funcionStr,punto,orden)
         return resultado
 
     def factorial(n):

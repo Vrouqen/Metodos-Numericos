@@ -1,12 +1,7 @@
+from Proyecto.unidades.Archivos import ManejoArchivos
 
 class Examen:
-
-    #Tema 1 - Espacios duales
-
-
-    #Tema 2 - Base dual
-
-    #Tema 3 - Interpolación polinómica lagrange
+    #nterpolación polinómica lagrange
     valoresX=[]
     valoresY=[]
     def interpolacionPolinomicaLagrange(valoresX, valoresY):
@@ -20,6 +15,7 @@ class Examen:
                         termino *= (x - valoresX[j]) / (valoresX[i] - valoresX[j])
                 valorInterpolado += termino
             return valorInterpolado
+        ManejoArchivos.almacenarDatosLagrange(valoresX,valoresY,x)
         return interpolate
 
 
