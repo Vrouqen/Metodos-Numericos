@@ -1,0 +1,5 @@
+FechaGenerado: 2023-09-01 08:02:27.886422
+Funcion: x**3+3
+ValorX: 1.0
+nDerivadas: 5
+

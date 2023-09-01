@@ -6,6 +6,7 @@ from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QMessageBox
 from Proyecto.unidades.Unidad_1 import Unidad1
 from Proyecto.unidades.Unidad_2 import Unidad2
+from Proyecto.unidades.Archivos import ManejoArchivos
 from unidades.Examen import Examen
 import matplotlib.pyplot as plt #Gráficos
 #Iniciar la aplicación
@@ -389,6 +390,13 @@ def borrarinter():
     Examen.valoresX=[]
     Examen.valoresY=[]
     main.textPuntos.setText("Valores de X : "+str(Examen.valoresX)+"\nValores de Y : "+str(Examen.valoresY))
+
+
+def transformarPDF():
+    inputFile="archivos\IEEE.txt"
+    outputFile="PDFs\Ava.pdf"
+    resultado=ManejoArchivos.convertirTxtToPDF(inputFile,outputFile)
+    print(resultado)
 
 
 #Asignación de funciones/utilidades

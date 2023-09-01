@@ -1,0 +1,5 @@
+FechaGenerado: 2023-09-01 08:02:08.067937
+ValoresX: [7.0, -6.0]
+ValoresY: [30.0, -22.0]
+ValorX: -4.0
+

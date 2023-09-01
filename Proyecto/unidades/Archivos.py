@@ -1,5 +1,29 @@
 from datetime import datetime
+from reportlab.pdfgen import canvas
+from fpdf import FPDF
+import os
+
 class ManejoArchivos:
+    def convertirTxtToPDF(input_file,output_file):
+        # Verificar si el archivo de entrada existe
+        if not os.path.isfile(input_file):
+            return "El archivo de entrada no existe."
+
+        # Leer el contenido del archivo de texto
+        with open(input_file, "r", encoding="utf-8") as txt_file:
+            text_content = txt_file.read()
+
+        # Crear el archivo PDF
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+        pdf.multi_cell(0, 10, txt=text_content)
+
+        # Guardar el archivo PDF
+        pdf.output(output_file)
+
+        return "Archivo PDF generado exitosamente."
+
     def almacenarDatosErrores(tipoError,valorReal, valorAproximado, resultado):
         # Esta función almacena los datos en un archivo
         with open("archivos\Errores.txt", 'a') as archivo:
